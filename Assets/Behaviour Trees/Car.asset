@@ -116,6 +116,8 @@ MonoBehaviour:
   drawGizmos: 0
   waypoints:
   - {fileID: 2498831429442259889, guid: a64eb8d3a9e565743a2ea75cf9063670, type: 3}
+  - {fileID: 8604828242402236129, guid: ec33f67a1059cfd428aaa3aef8baa520, type: 3}
+  - {fileID: 1316298512043461270, guid: 99c993e638aafb4439f0cc83f055e21e, type: 3}
 --- !u!114 &6538717862378683757
 MonoBehaviour:
   m_ObjectHideFlags: 0
