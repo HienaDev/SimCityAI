@@ -19,6 +19,9 @@ namespace TheKiwiCoder {
         public BoxCollider boxCollider;
         public CapsuleCollider capsuleCollider;
         public CharacterController characterController;
+        public PedestrianController pedestrianController;
+
+        public MeshRenderer[] meshRenderers;
         // Add other game specific systems here
 
         public static Context CreateFromGameObject(GameObject gameObject) {
@@ -33,10 +36,24 @@ namespace TheKiwiCoder {
             context.boxCollider = gameObject.GetComponent<BoxCollider>();
             context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
+            context.pedestrianController = gameObject.GetComponent<PedestrianController>();
+            context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
             
             // Add whatever else you need here...
 
             return context;
+        }
+
+        public void DeactivateAllMeshRenderers() {
+            foreach (MeshRenderer meshRenderer in meshRenderers) {
+                meshRenderer.enabled = false;
+            }
+        }
+
+        public void ActivateAllMeshRenderers() {
+            foreach (MeshRenderer meshRenderer in meshRenderers) {
+                meshRenderer.enabled = true;
+            }
         }
     }
 }
