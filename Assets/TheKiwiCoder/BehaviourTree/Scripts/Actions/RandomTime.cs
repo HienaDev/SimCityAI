@@ -3,10 +3,11 @@ using TheKiwiCoder;
 
 public class RandomTime : ActionNode
 {
-    public float maxTime = 10.0f;
+    public float maxTime;
     float randomTime;
 
     protected override void OnStart() {
+        maxTime = context.gameManager.GetMaxTime();
         randomTime = Random.Range(0f, maxTime);
     }
 
