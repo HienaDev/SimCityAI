@@ -20,6 +20,7 @@ namespace TheKiwiCoder {
         public CapsuleCollider capsuleCollider;
         public CharacterController characterController;
         public PedestrianController pedestrianController;
+        public GameManager gameManager;
 
         public MeshRenderer[] meshRenderers;
         // Add other game specific systems here
@@ -38,6 +39,7 @@ namespace TheKiwiCoder {
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.pedestrianController = gameObject.GetComponent<PedestrianController>();
             context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+            context.gameManager = GameObject.FindObjectOfType<GameManager>();
             
             // Add whatever else you need here...
 

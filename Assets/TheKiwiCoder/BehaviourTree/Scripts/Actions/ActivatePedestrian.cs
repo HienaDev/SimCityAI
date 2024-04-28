@@ -14,6 +14,8 @@ public class ActivatePedestrian : ActionNode
     protected override State OnUpdate() {
         context.ActivateAllMeshRenderers();
 
+        context.gameManager.AddPedestrian();
+
         return State.Success;
     }
 }
