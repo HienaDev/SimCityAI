@@ -1,5 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9016835784838925655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1c47199940c334286e4f5cf6552262, type: 3}
+  m_Name: DeactivatePedestrian
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 066b33e9cce2e8741ac0e7f80f63a2c3
+  position: {x: -0.000053167343, y: 421.9999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    time: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &-8875436345481980837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,7 +69,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   maxTime: 10
---- !u!114 &-987512795420268402
+--- !u!114 &-1124121593174035592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,13 +78,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1c47199940c334286e4f5cf6552262, type: 3}
-  m_Name: Deactivate
+  m_Script: {fileID: 11500000, guid: eb44f70973d635148a67f15daf75f315, type: 3}
+  m_Name: ActivatePedestrian
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: dcbb622188e578c43aa179ef85cddb56
-  position: {x: 0.000015258789, y: 422}
+  guid: 2e0144fc2b0eaa941af2fe25f94aa398
+  position: {x: 627.713, y: 421.9999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -114,9 +135,9 @@ MonoBehaviour:
   - {fileID: 4179860103550843959}
   - {fileID: -8875436345481980837}
   - {fileID: -2023478302358588474}
-  - {fileID: -987512795420268402}
   - {fileID: 2981059697453072110}
-  - {fileID: 7272227780969778203}
+  - {fileID: -9016835784838925655}
+  - {fileID: -1124121593174035592}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -144,9 +165,10 @@ MonoBehaviour:
   children:
   - {fileID: 4179860103550843959}
   - {fileID: -8875436345481980837}
-  - {fileID: -987512795420268402}
+  - {fileID: -9016835784838925655}
   - {fileID: -2023478302358588474}
   - {fileID: 2981059697453072110}
+  - {fileID: -1124121593174035592}
 --- !u!114 &1781862631364273694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,24 +237,3 @@ MonoBehaviour:
   - {fileID: 4408972677529495300, guid: 09252bf5fc69f0a40b68da9260e9f1bc, type: 3}
   - {fileID: 8067514999068541083, guid: 381fed535ccc227408d232ddd516a5d5, type: 3}
   - {fileID: 331847975015394785, guid: 4595f298f70de7d4ba37db32f2c3d58c, type: 3}
---- !u!114 &7272227780969778203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb44f70973d635148a67f15daf75f315, type: 3}
-  m_Name: Activate
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 177188c8c9ef5b441af0c53410b8cf8b
-  position: {x: 0, y: 0}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    time: 0
-  description: 
-  drawGizmos: 0
