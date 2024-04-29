@@ -400,7 +400,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f9b0ddb3094e922418a3f66bab740ef2
-  position: {x: 1579.6627, y: 276.99997}
+  position: {x: 1304, y: 277}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0

@@ -4,15 +4,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("[PEDESTRIANS]")]
-    [SerializeField] private GameObject     pedestrianPrefab;
-    [SerializeField] private int            maxNumberOfPedestrians = 10;
-    [SerializeField] private GameObject[]   pedestriansSpawnPoints;
-    [SerializeField] private float          maxDestinyTimePedestrians = 10.0f;
+    [SerializeField] private GameObject   pedestrianPrefab;
+    [SerializeField] private int          maxNumberOfPedestrians = 10;
+    [SerializeField] private GameObject[] pedestriansSpawnPoints;
+    [SerializeField] private float        maxDestinyTimePedestrians = 10.0f;
 
     [Header("[CAOS]")]
-    [SerializeField] [Range(0, 100)] private float          caosChance = 2f;
-    [SerializeField] private float          maxCaosTime = 10.0f;
-    [SerializeField] private float          blinkSpeed = 5;
+    [SerializeField] [Range(0, 100)] private float caosChance = 2f;
+    [SerializeField] private float                 maxCaosTime = 10.0f;
+    [SerializeField] private float                 blinkSpeed = 5;
 
     private int numberOfPedestrians = 0;
 
