@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 066b33e9cce2e8741ac0e7f80f63a2c3
-  position: {x: 559.8012, y: 434.2361}
+  position: {x: 556.136, y: 432.85004}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -46,28 +46,6 @@ MonoBehaviour:
   - {fileID: 7787187600016145544}
   - {fileID: 265629276802035219}
   - {fileID: 9120536614107640369}
---- !u!114 &-2023478302358588474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5af9c649a1d79748a787b0296afddbc, type: 3}
-  m_Name: RandomTime
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 70ab77e7f84bc5343aa7129cda4a20f0
-  position: {x: 763.8013, y: 434.2361}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    time: 0
-  description: 
-  drawGizmos: 0
-  maxTime: 10
 --- !u!114 &-1969793891459299730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,38 +82,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2e0144fc2b0eaa941af2fe25f94aa398
-  position: {x: 1167.0118, y: 434}
+  position: {x: 942.7495, y: 433}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
   description: 
   drawGizmos: 0
---- !u!114 &-924548771129140850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3541fcbeeedf3f428796714bbbdc92c, type: 3}
-  m_Name: PedestrianMoveToPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 5e1a6eeb4e5c58c4ca0dcb692ce9b917
-  position: {x: 463.48663, y: 641.88525}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    time: 0
-  description: 
-  drawGizmos: 0
-  speed: 5
-  stoppingDistance: 0.1
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 1
 --- !u!114 &-380348823083775372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +131,6 @@ MonoBehaviour:
   - {fileID: 265629276802035219}
   - {fileID: -380348823083775372}
   - {fileID: 4179860103550843959}
-  - {fileID: -2023478302358588474}
   - {fileID: 2981059697453072110}
   - {fileID: -9016835784838925655}
   - {fileID: -1124121593174035592}
@@ -190,7 +141,8 @@ MonoBehaviour:
   - {fileID: 7498247971246657366}
   - {fileID: 9120536614107640369}
   - {fileID: -1969793891459299730}
-  - {fileID: -924548771129140850}
+  - {fileID: 5241477754440959864}
+  - {fileID: 3474087369413009830}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -218,10 +170,11 @@ MonoBehaviour:
   children:
   - {fileID: -1969793891459299730}
   - {fileID: 4179860103550843959}
+  - {fileID: 3474087369413009830}
   - {fileID: -9016835784838925655}
-  - {fileID: -2023478302358588474}
   - {fileID: 2981059697453072110}
   - {fileID: -1124121593174035592}
+  - {fileID: 5241477754440959864}
 --- !u!114 &1238978913928314843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +235,38 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6073054ef2b25854c842eb569b5618cd
-  position: {x: 968.80115, y: 434.2361}
+  position: {x: 749.8071, y: 433}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
   description: 
   drawGizmos: 0
+--- !u!114 &3474087369413009830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a385ae42ee3582b4f901938bb27fa9db, type: 3}
+  m_Name: PedestrianMoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: aaa1b3a5622d7e1479f0cb10f0d956b5
+  position: {x: 341.25003, y: 434}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    time: 0
+  description: 
+  drawGizmos: 0
+  speed: 5
+  stoppingDistance: 0.1
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
 --- !u!114 &3784744079687974934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +282,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: 914a1e0b833cbb940b01f560c5d0f474
-  position: {x: -668.01025, y: 434.00003}
+  position: {x: -706.59344, y: 434.00003}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -334,6 +313,27 @@ MonoBehaviour:
   - {fileID: 4408972677529495300, guid: 09252bf5fc69f0a40b68da9260e9f1bc, type: 3}
   - {fileID: 8067514999068541083, guid: 381fed535ccc227408d232ddd516a5d5, type: 3}
   - {fileID: 331847975015394785, guid: 4595f298f70de7d4ba37db32f2c3d58c, type: 3}
+--- !u!114 &5241477754440959864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f50b7966d8207444a95de3082dae375, type: 3}
+  m_Name: ChangeOfGettingDrunk
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ecc980c57f1a30644a64404950e3ee62
+  position: {x: 1133.426, y: 433.00003}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    time: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &7498247971246657366
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class DrunkMoveToPosition : ActionNode
     }
 
     protected override void OnStop() {
+        context.renderer.material.color = context.originalColor;
     }
 
     protected override State OnUpdate() {
@@ -32,12 +33,15 @@ public class DrunkMoveToPosition : ActionNode
         }
 
         if (!context.pedestrianController.IsDrunk) {
+            context.renderer.material.color = context.originalColor;
             return State.Failure;
         }
 
         if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
             return State.Failure;
         }
+        
+        context.Blink();
 
         return State.Running;
     }

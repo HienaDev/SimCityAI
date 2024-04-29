@@ -20,8 +20,9 @@ namespace TheKiwiCoder {
         public CapsuleCollider capsuleCollider;
         public CharacterController characterController;
         public PedestrianController pedestrianController;
+        public Renderer renderer;
         public GameManager gameManager;
-
+        public Color originalColor;
         public MeshRenderer[] meshRenderers;
         // Add other game specific systems here
 
@@ -39,7 +40,12 @@ namespace TheKiwiCoder {
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.pedestrianController = gameObject.GetComponent<PedestrianController>();
             context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+            context.renderer = gameObject.GetComponentInChildren<Renderer>();
             context.gameManager = GameObject.FindObjectOfType<GameManager>();
+
+            if (context.renderer != null) {
+                context.originalColor = context.renderer.material.color;
+            }
             
             // Add whatever else you need here...
 
@@ -56,6 +62,13 @@ namespace TheKiwiCoder {
             foreach (MeshRenderer meshRenderer in meshRenderers) {
                 meshRenderer.enabled = true;
             }
+        }
+
+        public void Blink() {
+            float blinkSpeed = gameManager.GetBlinkSpeed;
+            float lerpFactor = Mathf.PingPong(Time.time * blinkSpeed, 1);
+
+            renderer.material.color = Color.Lerp(originalColor, Color.red , lerpFactor);
         }
     }
 }

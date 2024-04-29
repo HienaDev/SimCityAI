@@ -3,8 +3,10 @@ using UnityEngine;
 public class PedestrianController : MonoBehaviour
 {
     private bool isDrunk;
+    private float drunkStartTime;
+    private float drunkDuration;
 
-    public bool IsDrunk => isDrunk;
+    public bool IsDrunk { get => isDrunk; set => isDrunk = value; }
 
     public void DeactivateAllMeshRenderers()
     {
@@ -24,20 +26,29 @@ public class PedestrianController : MonoBehaviour
         }
     }
 
-    private void Update() 
+    public void ChangeOfGettingDrunk(float caosChange)
     {
-        // DEBUG ONLY
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Random.Range(0f, 100f) < caosChange)
         {
             isDrunk = true;
+            drunkStartTime = Time.time;
+            drunkDuration = Random.Range(0, GameManager.Instance.GetMaxCaosTime);
         }
-        if (Input.GetKeyDown(KeyCode.F))
+    }
+
+    private void StopBeingDrunk()
+    {
+        if (isDrunk && Time.time - drunkStartTime > drunkDuration)
         {
             isDrunk = false;
         }
-        if (isDrunk)
-            Debug.Log("Pedestrian is drunk");
-        if (!isDrunk)
-            Debug.Log("Pedestrian is not drunk");
+    }
+
+    private void FixedUpdate()
+    {
+       if (isDrunk) 
+       {
+           StopBeingDrunk();
+       }
     }
 }

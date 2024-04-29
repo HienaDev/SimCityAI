@@ -649,12 +649,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestrianPrefab: {fileID: 8869372596771514745, guid: 327eed52c6f9f674b812f4f02d8e2787,
     type: 3}
-  maxNumberOfPedestrians: 1
+  maxNumberOfPedestrians: 5
   pedestriansSpawnPoints:
   - {fileID: 334774728}
   - {fileID: 1239208950}
   - {fileID: 2050413822}
   maxDestinyTimePedestrians: 10
+  caosChange: 2
+  maxCaosTime: 10
+  blinkSpeed: 5
 --- !u!1 &931841389
 GameObject:
   m_ObjectHideFlags: 0
