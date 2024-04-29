@@ -4,17 +4,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("[PEDESTRIANS]")]
-    [SerializeField] private GameObject   pedestrianPrefab;
-    [SerializeField] private int          maxNumberOfPedestrians = 10;
-    [SerializeField] private GameObject[] pedestriansSpawnPoints;
-    [SerializeField] private float        maxDestinyTimePedestrians = 10.0f;
+    [SerializeField] private GameObject     pedestrianPrefab;
+    [SerializeField] private int            numberOfPedestrians = 10;
+    [SerializeField] private GameObject[]   pedestriansSpawnPoints;
+    [SerializeField] private float          maxDestinyTimePedestrians = 10.0f;
 
     [Header("[CAOS]")]
     [SerializeField] [Range(0, 100)] private float caosChance = 2f;
     [SerializeField] private float                 maxCaosTime = 10.0f;
     [SerializeField] private float                 blinkSpeed = 5;
 
-    private int numberOfPedestrians = 0;
+    private int numberOfActivePedestrians = 0;
 
     /// <summary>
     /// Singleton instance
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        for (int i = 0; i < maxNumberOfPedestrians; i++)
+        for (int i = 0; i < numberOfPedestrians; i++)
         {
             StartCoroutine(SpawnPedestrianAtRandomTime());
         }
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         int spawnPointIndex = Random.Range(0, pedestriansSpawnPoints.Length);
         GameObject spawnPoint = pedestriansSpawnPoints[spawnPointIndex];
         Instantiate(pedestrianPrefab, spawnPoint.transform.position, Quaternion.identity);
-        numberOfPedestrians++;
+        numberOfActivePedestrians++;
     }
 
     /// <summary>
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void AddPedestrian()
     {
-        numberOfPedestrians++;
+        numberOfActivePedestrians++;
     }
 
     /// <summary>
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void RemovePedestrian()
     {
-        numberOfPedestrians--;
+        numberOfActivePedestrians--;
     }
 
     /// <summary>
