@@ -52,25 +52,22 @@ Quando um peão está em acidente, este fica parado no local do acidente durante
 
 O *Game Manager* é o objeto que controla o estado, antes e durante, da simulação. É aqui que permite que a simulação seja personalizada, permitindo ao utilizador definir tudo o que é passível de ser definido. E esses parâmetros são:
 
-#### Peões (*Pedestrians*)
-
-- ***numberOfPedestrians***: número máximo de peões a serem gerados no inicio da simulação,
-- ***:pedestriansSpawnPoints***:: possíveis pontos de *spawn* e destino dos peões,
-- ***:maxDestinyTimePedestrians***:: intervalo máximo de tempo para um peão ser gerado ou estar parado num destino,
-
-[PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DOS PEÕES]
-
-#### Caos (*Chaos*)
-
-- ***chaosChance***: probabilidade de um agente começar a comportar-se de forma errática,
-- ***maxChaosTime***: intervalo máximo de tempo máximo para um agente estar em estado de caos,
-- ***blinkSpeed***: velocidade do efeito de piscar de um agente em estado de caos,
+- Peões (*Pedestrians*)
+  - ***numberOfPedestrians***: número máximo de peões a serem gerados no inicio da simulação,
+  - ***:pedestriansSpawnPoints***: possíveis pontos de *spawn* e destino dos peões,
+  - ***:maxDestinyTimePedestrians***: intervalo máximo de tempo para um peão ser gerado ou estar parado num destino,
 
 [PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DOS PEÕES]
 
-#### Acidente (*Accident*)
+- Caos (*Chaos*)
+  - ***chaosChance***: probabilidade de um agente começar a comportar-se de forma errática,
+  - ***maxChaosTime***: intervalo máximo de tempo máximo para um agente estar em estado de caos,
+  - ***blinkSpeed***: velocidade do efeito de piscar de um agente em estado de caos,
 
-- ***maxAccidentTime***: intervalo máximo de tempo para um agente estar em estado de acidente,
+[PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DOS PEÕES]
+
+- Acidente (*Accident*)
+  - ***maxAccidentTime***: intervalo máximo de tempo para um agente estar em estado de acidente,
 
 [PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DOS PEÕES]
 
