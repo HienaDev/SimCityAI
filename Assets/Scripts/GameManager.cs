@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[]   pedestriansSpawnPoints;
     [SerializeField] private float          maxDestinyTimePedestrians = 10.0f;
 
-    [Header("[CAOS]")]
-    [SerializeField] [Range(0, 100)] private float caosChance = 2f;
-    [SerializeField] private float                 maxCaosTime = 10.0f;
+    [Header("[CHAOS]")]
+    [SerializeField] [Range(0, 100)] private float chaosChance = 2f;
+    [SerializeField] private float                 maxChaosTime = 10.0f;
     [SerializeField] private float                 blinkSpeed = 5;
 
     private int numberOfActivePedestrians = 0;
@@ -26,17 +26,17 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public float GetMaxDestinyTimePedestrians => maxDestinyTimePedestrians;
     /// <summary>
-    /// Get the max time that an agent can be in caos state
+    /// Get the max time that an agent can be in chaos state
     /// </summary>
-    public float GetMaxCaosTime => maxCaosTime;
+    public float GetMaxChaosTime => maxChaosTime;
     /// <summary>
     /// Get the speed of the blink effect
     /// </summary>
     public float GetBlinkSpeed => blinkSpeed;
     /// <summary>
-    /// Get the chance of an agent starting the caos
+    /// Get the chance of an agent starting the chaos
     /// </summary>
-    public float GetCaosChance => caosChance;
+    public float GetChaosChance => chaosChance;
 
     /// <summary>
     /// Start the game manager

@@ -14,7 +14,7 @@ public class ChangeOfGettingDrunk : ActionNode
 
     protected override State OnUpdate() {
         context.pedestrianController.ChangeOfGettingDrunk
-                                    (context.gameManager.GetCaosChance);
+                                    (context.gameManager.GetChaosChance);
 
         if (context.pedestrianController.IsDrunk)
         {

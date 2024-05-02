@@ -59,7 +59,7 @@ public class PedestrianController : MonoBehaviour
         if (isDrunk)
         {
             drunkStartTime = Time.time;
-            drunkDuration = Random.Range(0, GameManager.Instance.GetMaxCaosTime);
+            drunkDuration = Random.Range(0, GameManager.Instance.GetMaxChaosTime);
         }
     }
 

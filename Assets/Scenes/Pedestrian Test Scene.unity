@@ -654,9 +654,9 @@ MonoBehaviour:
   - {fileID: 334774728}
   - {fileID: 1239208950}
   - {fileID: 2050413822}
-  maxDestinyTimePedestrians: 5
-  caosChance: 2
-  maxCaosTime: 10
+  maxDestinyTimePedestrians: 10
+  chaosChance: 2
+  maxChaosTime: 10
   blinkSpeed: 5
 --- !u!1 &931841389
 GameObject:
