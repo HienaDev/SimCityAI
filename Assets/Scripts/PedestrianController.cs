@@ -3,6 +3,7 @@ using UnityEngine;
 public class PedestrianController : MonoBehaviour
 {
     private bool isDrunk;
+    private bool hasAccident;
     private float drunkStartTime;
     private float drunkDuration;
 
@@ -11,6 +12,12 @@ public class PedestrianController : MonoBehaviour
     /// </summary>
     /// <value> Boolean to set if is drunk </value>
     public bool IsDrunk { get => isDrunk; set => isDrunk = value; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this pedestrian has an accident.
+    /// </summary>
+    /// <value> Boolean to define if there is an accident </value>
+    public bool HasAccident { get => hasAccident; set => hasAccident = value; }
 
     /// <summary>
     /// Deactivate all mesh renderers.

@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float                 maxChaosTime = 10.0f;
     [SerializeField] private float                 blinkSpeed = 5;
 
+    [Header("[ACCIDENT]")]
+    [SerializeField] private float maxAccidentTime;
+
     private int numberOfActivePedestrians = 0;
 
     /// <summary>
@@ -37,6 +40,10 @@ public class GameManager : MonoBehaviour
     /// Get the chance of an agent starting the chaos
     /// </summary>
     public float GetChaosChance => chaosChance;
+    /// <summary>
+    /// Get the max time that an agent can be in accident state
+    /// </summary>
+    public float GetMaxAccidentTime => maxAccidentTime;
 
     /// <summary>
     /// Start the game manager
@@ -97,7 +104,8 @@ public class GameManager : MonoBehaviour
                 if (hit.collider.CompareTag("Pedestrian"))
                 {
                     PedestrianController pedestrianController = hit.collider.GetComponent<PedestrianController>();
-                    pedestrianController.SetDrunkState(true);
+                    pedestrianController.HasAccident = true;
+                    Debug.Log("Pedestrian has an accident? " + pedestrianController.HasAccident);
                 }
             }
         }

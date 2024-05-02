@@ -33,7 +33,10 @@ public class DrunkMoveToPosition : ActionNode
         }
 
         if (!context.pedestrianController.IsDrunk) {
-            context.renderer.material.color = context.originalColor;
+            return State.Failure;
+        }
+
+        if (context.pedestrianController.HasAccident) {
             return State.Failure;
         }
 

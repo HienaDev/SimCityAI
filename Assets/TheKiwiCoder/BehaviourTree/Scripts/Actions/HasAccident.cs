@@ -1,7 +1,9 @@
-using UnityEngine.AI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using TheKiwiCoder;
 
-public class IsDrunk : ActionNode
+public class HasAccident : ActionNode
 {
     protected override void OnStart() {
     }
@@ -10,12 +12,12 @@ public class IsDrunk : ActionNode
     }
 
     protected override State OnUpdate() {
-        if (context.pedestrianController.IsDrunk) {
-            context.agent.agentTypeID = NavMesh.GetSettingsByIndex(2).agentTypeID;
+
+        if (context.pedestrianController.HasAccident) {
             return State.Success;
         }
-        
-        if (!context.pedestrianController.IsDrunk){
+
+        if (!context.pedestrianController.HasAccident) {
             return State.Failure;
         }
 

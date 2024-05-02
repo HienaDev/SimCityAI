@@ -13,7 +13,7 @@
 
 - Rafael José:
   - Peões
-    - Comportamento (*Behavior Tree*)
+    - Árvore de comportamento (*Behavior Tree*)
     - Efeito de alcoolismo (*Chaos*)
     - *Pathfinding*
     - Passadeiras
@@ -21,6 +21,8 @@
     - Definições dos peões
     - Definições de *chaos*
   - Relatório
+  - *Context*
+    - Efeito de piscar (*Blink effect*)
 
 ## Introdução
 

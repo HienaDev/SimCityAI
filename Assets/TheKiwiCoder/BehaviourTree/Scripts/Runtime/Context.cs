@@ -52,18 +52,27 @@ namespace TheKiwiCoder {
             return context;
         }
 
+        /// <summary>
+        /// Deactivate all agent's mesh renderers.
+        /// </summary>
         public void DeactivateAllMeshRenderers() {
             foreach (MeshRenderer meshRenderer in meshRenderers) {
                 meshRenderer.enabled = false;
             }
         }
 
+        /// <summary>
+        /// Activate all agent's mesh renderers.
+        /// </summary>
         public void ActivateAllMeshRenderers() {
             foreach (MeshRenderer meshRenderer in meshRenderers) {
                 meshRenderer.enabled = true;
             }
         }
 
+        /// <summary>
+        /// Blink the agent from his original color to red and back.
+        /// </summary>
         public void Blink() {
             float blinkSpeed = gameManager.GetBlinkSpeed;
             float lerpFactor = Mathf.PingPong(Time.time * blinkSpeed, 1);

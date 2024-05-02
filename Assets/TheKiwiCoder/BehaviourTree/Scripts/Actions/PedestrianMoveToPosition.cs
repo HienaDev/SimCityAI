@@ -35,6 +35,10 @@ public class PedestrianMoveToPosition : ActionNode
             return State.Failure;
         }
 
+        if (context.pedestrianController.HasAccident) {
+            return State.Failure;
+        }
+
         if (context.agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathInvalid) {
             return State.Failure;
         }
