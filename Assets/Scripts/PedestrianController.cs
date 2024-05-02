@@ -46,10 +46,10 @@ public class PedestrianController : MonoBehaviour
     /// <summary>
     /// Change of the pedestrian getting drunk.
     /// </summary>
-    /// <param name="caosChance"> Change from the pedestrian getting drunk </param>
-    public void ChangeOfGettingDrunk(float caosChance)
+    /// <param name="chaosChance"> Change from the pedestrian getting drunk </param>
+    public void ChangeOfGettingDrunk(float chaosChance)
     {
-        if (Random.Range(0f, 100f) < caosChance)
+        if (Random.Range(0f, 100f) < chaosChance)
         {
             SetDrunkState(true);
         }
@@ -71,7 +71,7 @@ public class PedestrianController : MonoBehaviour
     }
 
     /// <summary>
-    /// The pedestrian stops being drunk.
+    /// The pedestrian stops being drunk after a certain time.
     /// </summary>
     private void StopBeingDrunk()
     {
