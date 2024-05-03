@@ -332,11 +332,6 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  speed: 5
-  stoppingDistance: 0.1
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 1
 --- !u!114 &3784744079687974934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,11 +420,6 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  speed: 5
-  stoppingDistance: 0.1
-  updateRotation: 1
-  acceleration: 40
-  tolerance: 1
 --- !u!114 &7787187600016145544
 MonoBehaviour:
   m_ObjectHideFlags: 0

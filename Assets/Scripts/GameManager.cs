@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
                 if (hit.collider.CompareTag("Pedestrian"))
                 {
                     PedestrianController pedestrianController = hit.collider.GetComponent<PedestrianController>();
-                    pedestrianController.IsDrunk = true;
+                    pedestrianController.SetDrunkState(true);
                 }
             }
         }

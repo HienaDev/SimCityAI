@@ -5,18 +5,14 @@ using TheKiwiCoder;
 
 public class DrunkMoveToPosition : ActionNode
 {
-    public float speed = 5;
-    public float stoppingDistance = 0.1f;
-    public bool updateRotation = true;
-    public float acceleration = 40.0f;
-    public float tolerance = 1.0f;
+    private float speed;
 
     protected override void OnStart() {
-        context.agent.stoppingDistance = stoppingDistance;
-        context.agent.speed = speed;
+        context.agent.updatePosition = false;
+        context.agent.updateRotation = false;
         context.agent.destination = blackboard.moveToPosition;
-        context.agent.updateRotation = updateRotation;
-        context.agent.acceleration = acceleration;
+        speed = Random.Range(4.0f, 7.0f);
+        context.agent.speed = speed;
     }
 
     protected override void OnStop() {
@@ -28,8 +24,17 @@ public class DrunkMoveToPosition : ActionNode
             return State.Running;
         }
 
-        if (context.agent.remainingDistance < tolerance) {
+        if (context.agent.remainingDistance <= 0) {
             return State.Success;
+        }
+        else { 
+            Vector3 nextPosition = context.agent.nextPosition;
+            Vector3 direction = nextPosition - context.transform.position;
+
+            if (direction.magnitude > 0.1f) {
+                context.transform.position += direction.normalized * speed * Time.deltaTime;
+                context.transform.rotation = Quaternion.LookRotation(direction);
+            }
         }
 
         if (!context.pedestrianController.IsDrunk) {
