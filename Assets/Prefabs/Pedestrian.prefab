@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5720160205071703063}
   - component: {fileID: 6365402928595081080}
   - component: {fileID: 2603914416080218538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 5706184983347373533}
   - component: {fileID: 2383556951251722646}
   - component: {fileID: 7616005186540471547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4711960730825567547}
   - component: {fileID: 1377370717399214564}
   - component: {fileID: 8558230206352491959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pedestrian
   m_TagString: Pedestrian
   m_Icon: {fileID: 0}
