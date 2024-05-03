@@ -649,7 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestrianPrefab: {fileID: 8869372596771514745, guid: 327eed52c6f9f674b812f4f02d8e2787,
     type: 3}
-  numberOfPedestrians: 2
+  numberOfPedestrians: 1
   pedestriansSpawnPoints:
   - {fileID: 334774728}
   - {fileID: 1239208950}
