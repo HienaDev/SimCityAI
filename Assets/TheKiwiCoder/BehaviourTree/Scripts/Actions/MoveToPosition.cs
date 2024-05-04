@@ -23,7 +23,6 @@ public class MoveToPosition : ActionNode
     }
 
     protected override State OnUpdate() {
-        Debug.Log(context.agent.remainingDistance);
         if (context.agent.pathPending) {
             return State.Running;
         }

@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     [Header("[ACCIDENT]")]
     [SerializeField] private float maxAccidentTime;
 
+    [Header("[CARS]")]
+    [SerializeField] private GameObject[] waypoints;
+    public GameObject[] Waypoints { get; private set; }
+
     private int numberOfActivePedestrians = 0;
 
     /// <summary>

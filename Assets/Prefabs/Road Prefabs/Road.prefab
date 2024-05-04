@@ -252,7 +252,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &4402207234871750768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &8239741746335406197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 1680282861723135348}
   - component: {fileID: 141173953043116912}
   - component: {fileID: 7129350576910111732}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Lane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &2179109146257033603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &117275915802218846
 MonoBehaviour:
   m_ObjectHideFlags: 0

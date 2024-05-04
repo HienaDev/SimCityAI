@@ -18,6 +18,8 @@ namespace TheKiwiCoder {
                 current = i;
                 var child = children[current];
 
+                //Debug.Log(children[current].description);
+
                 switch (child.Update()) {
                     case State.Running:
                         return State.Running;

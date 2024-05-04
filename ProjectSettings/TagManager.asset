@@ -15,9 +15,9 @@ TagManager:
   - Car
   - Pedestrian
   - Lane
-  - 
-  - 
-  - 
+  - TrafficLight
+  - StopSign
+  - House
   - 
   - 
   - 

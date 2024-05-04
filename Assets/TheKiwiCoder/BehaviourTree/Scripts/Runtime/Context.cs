@@ -15,6 +15,7 @@ namespace TheKiwiCoder {
         public Animator animator;
         public Rigidbody physics;
         public NavMeshAgent agent;
+        public float defaultAgentSpeed;
         public SphereCollider sphereCollider;
         public BoxCollider boxCollider;
         public CapsuleCollider capsuleCollider;
@@ -24,6 +25,11 @@ namespace TheKiwiCoder {
         public GameManager gameManager;
         public Color originalColor;
         public MeshRenderer[] meshRenderers;
+        public DisplayRaycastDistance drd;
+        public TrafficCollider trafficCollider;
+        public StopSignLogic waitingForStopSign;
+        public bool readyForNextDestination = true;
+       
         // Add other game specific systems here
 
         public static Context CreateFromGameObject(GameObject gameObject) {
@@ -38,10 +44,14 @@ namespace TheKiwiCoder {
             context.boxCollider = gameObject.GetComponent<BoxCollider>();
             context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
-            context.pedestrianController = gameObject.GetComponent<PedestrianController>();
+            context.pedestrianController = gameObject.GetComponent<PedestrianController>(); 
             context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
             context.renderer = gameObject.GetComponentInChildren<Renderer>();
             context.gameManager = GameObject.FindObjectOfType<GameManager>();
+            context.drd = gameObject.GetComponent<DisplayRaycastDistance>();
+            context.trafficCollider = gameObject.GetComponentInChildren<TrafficCollider>();
+            context.waitingForStopSign = gameObject.GetComponent<StopSignLogic>();
+            context.defaultAgentSpeed = context.agent.speed;
 
             if (context.renderer != null) {
                 context.originalColor = context.renderer.material.color;

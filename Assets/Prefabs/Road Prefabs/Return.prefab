@@ -126,7 +126,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &9163626736939390942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 6739249814133814451}
   - component: {fileID: 7167556683012100348}
   - component: {fileID: 546942990772410014}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Lane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: a98c17ec00000000
 --- !u!114 &1335584434334985787
 MonoBehaviour:
   m_ObjectHideFlags: 0
