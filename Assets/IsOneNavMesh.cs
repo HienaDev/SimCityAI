@@ -94,6 +94,7 @@ public class AgentLinkMover : MonoBehaviour
         Vector3 endPos = data.endPos + Vector3.up * agent.baseOffset;
         while (agent.transform.position != endPos)
         {
+            agent.transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(agent.transform.position, endPos - agent.transform.position, agent.angularSpeed, 0.0f));
             agent.transform.position = Vector3.MoveTowards(agent.transform.position, endPos, agent.speed * Time.deltaTime);  
             yield return null;
         }

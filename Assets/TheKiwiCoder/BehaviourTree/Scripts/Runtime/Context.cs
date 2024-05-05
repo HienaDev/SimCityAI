@@ -29,6 +29,7 @@ namespace TheKiwiCoder {
         public TrafficCollider trafficCollider;
         public StopSignLogic waitingForStopSign;
         public bool readyForNextDestination = true;
+        public IsCarDrunk icd;
        
         // Add other game specific systems here
 
@@ -51,7 +52,10 @@ namespace TheKiwiCoder {
             context.drd = gameObject.GetComponent<DisplayRaycastDistance>();
             context.trafficCollider = gameObject.GetComponentInChildren<TrafficCollider>();
             context.waitingForStopSign = gameObject.GetComponent<StopSignLogic>();
-            context.defaultAgentSpeed = context.agent.speed;
+            context.icd = gameObject.GetComponent<IsCarDrunk>();
+
+            if(context.agent != null)
+                context.defaultAgentSpeed = context.agent.speed;
 
             if (context.renderer != null) {
                 context.originalColor = context.renderer.material.color;

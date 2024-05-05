@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Name: Repeat
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: bffe95757fa16f646866e79ebb60f8ec
   position: {x: -41.399963, y: -110.79999}
   blackboard:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: RandomSelector
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 4896a25ae153ecf4a95b11e492d9b64c
   position: {x: -290.60022, y: 268.57553}
   blackboard:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 722247fb92f4cca4dbe7527a939f7bf3
   position: {x: -41.600037, y: -231.21603}
   blackboard:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: Sequencer
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: bec215737663902419fc584107b9890a
   position: {x: -27.200031, y: 94.11061}
   blackboard:

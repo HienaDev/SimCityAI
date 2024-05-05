@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +21,11 @@ public class GameManager : MonoBehaviour
 
     [Header("[CARS]")]
     [SerializeField] private GameObject[] waypoints;
+    private int[] carsToSpawnInEachWaypoint;
+    [SerializeField] private List<IsCarDrunk> carsToGetDrunks;
+    [SerializeField] private float carsToSpawn;
+    [SerializeField] private GameObject carPrefab;
+    private WaitForSeconds wfsCar;
     public GameObject[] Waypoints { get; private set; }
 
     private int numberOfActivePedestrians = 0;
@@ -60,6 +67,41 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+
+        
+    }
+
+    private void Start()
+    {
+        carsToSpawnInEachWaypoint = new int[waypoints.Length];
+
+        carsToGetDrunks = new List<IsCarDrunk>();
+
+        for (int i = 0; i < carsToSpawn; i++)
+        {
+            int waypointToSpawn = Random.Range(0, waypoints.Length);
+            carsToSpawnInEachWaypoint[waypointToSpawn]++;
+
+        }
+
+        wfsCar = new WaitForSeconds(2);
+
+
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            StartCoroutine(SpawnCarsAtWaypoints(i));
+
+        }
+    }
+
+    private IEnumerator SpawnCarsAtWaypoints(int n)
+    {
+        while (carsToSpawnInEachWaypoint[n] > 0)
+        {
+            carsToSpawnInEachWaypoint[n]--;
+            Instantiate(carPrefab, waypoints[n].transform.position, Quaternion.identity, transform);
+            yield return wfsCar;
+        }
     }
 
     /// <summary>
