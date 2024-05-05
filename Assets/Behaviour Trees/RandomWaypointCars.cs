@@ -22,7 +22,6 @@ public class RandomWaypointCars : ActionNode
         {
             context.readyForNextDestination = false;
             GameObject waypoint = waypoints[Random.Range(0, waypoints.Length)];
-            Debug.Log(waypoint.transform.position);
             blackboard.moveToPosition.x = waypoint.transform.position.x;
             blackboard.moveToPosition.z = waypoint.transform.position.z;
             return State.Success;

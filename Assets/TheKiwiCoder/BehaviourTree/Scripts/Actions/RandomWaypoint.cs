@@ -14,8 +14,9 @@ public class RandomWaypoint : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.moveToPosition.x = waypoints[Random.Range(0, waypoints.Length)].transform.position.x;
-        blackboard.moveToPosition.z = waypoints[Random.Range(0, waypoints.Length)].transform.position.z;
+        GameObject waypoint = waypoints[Random.Range(0, waypoints.Length)];
+        blackboard.moveToPosition.x = waypoint.transform.position.x;
+        blackboard.moveToPosition.z = waypoint.transform.position.z;
         return State.Success;
     }
 }

@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
@@ -25,7 +29,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<IsCarDrunk> carsToGetDrunks;
     [SerializeField] private float carsToSpawn;
     [SerializeField] private GameObject carPrefab;
+    [SerializeField] private float timeForCarToSpawn;
     private WaitForSeconds wfsCar;
+    [SerializeField] private Vector2 timeForCarsToMove;
+    
     public GameObject[] Waypoints { get; private set; }
 
     private int numberOfActivePedestrians = 0;
@@ -79,18 +86,36 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < carsToSpawn; i++)
         {
-            int waypointToSpawn = Random.Range(0, waypoints.Length);
+            int waypointToSpawn = UnityEngine.Random.Range(0, waypoints.Length);
             carsToSpawnInEachWaypoint[waypointToSpawn]++;
 
         }
 
-        wfsCar = new WaitForSeconds(2);
+        wfsCar = new WaitForSeconds(timeForCarToSpawn);
 
 
         for (int i = 0; i < waypoints.Length; i++)
         {
             StartCoroutine(SpawnCarsAtWaypoints(i));
 
+        }
+
+        //RandomCarDrunk();
+    }
+
+
+
+    public void RandomCarDrunk()
+    {
+        bool alreadyDrunk = false;
+        System.Random r = new System.Random();
+        foreach (int i in Enumerable.Range(0, carsToGetDrunks.Count).OrderBy(x => r.Next()))
+        {
+            if(!alreadyDrunk && !carsToGetDrunks[i].isDrunk) 
+            {
+                carsToGetDrunks[i].ActivateDrunk();
+                alreadyDrunk = true;
+            }
         }
     }
 
@@ -99,7 +124,8 @@ public class GameManager : MonoBehaviour
         while (carsToSpawnInEachWaypoint[n] > 0)
         {
             carsToSpawnInEachWaypoint[n]--;
-            Instantiate(carPrefab, waypoints[n].transform.position, Quaternion.identity, transform);
+            GameObject car =  Instantiate(carPrefab, waypoints[n].transform.position, Quaternion.identity, transform);
+            carsToGetDrunks.Add(car.GetComponent<IsCarDrunk>());
             yield return wfsCar;
         }
     }
@@ -110,10 +136,10 @@ public class GameManager : MonoBehaviour
     /// <returns> Wait time </returns>
     private IEnumerator SpawnPedestrianAtRandomTime()
     {
-        float waitTime = Random.Range(0f, maxDestinyTimePedestrians);
+        float waitTime = UnityEngine.Random.Range(0f, maxDestinyTimePedestrians);
         yield return new WaitForSeconds(waitTime);
 
-        int spawnPointIndex = Random.Range(0, pedestriansSpawnPoints.Length);
+        int spawnPointIndex = UnityEngine.Random.Range(0, pedestriansSpawnPoints.Length);
         GameObject spawnPoint = pedestriansSpawnPoints[spawnPointIndex];
         Instantiate(pedestrianPrefab, spawnPoint.transform.position, Quaternion.identity);
         numberOfActivePedestrians++;
@@ -153,6 +179,11 @@ public class GameManager : MonoBehaviour
                     pedestrianController.SetDrunkState(true);
                 }
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            RandomCarDrunk();
         }
     }
 }

@@ -31,8 +31,6 @@ public class IsCarDrunk : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            StartCoroutine(GetDrunk());
 
     }
 
@@ -42,6 +40,11 @@ public class IsCarDrunk : MonoBehaviour
             StartCoroutine(GetDrunk());
 
         
+    }
+
+    public void ActivateDrunk()
+    {
+        StartCoroutine(GetDrunk());
     }
 
     private IEnumerator GetDrunk()
