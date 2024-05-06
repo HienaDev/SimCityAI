@@ -3845,12 +3845,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedestrianPrefab: {fileID: 8869372596771514745, guid: 327eed52c6f9f674b812f4f02d8e2787,
     type: 3}
-  numberOfPedestrians: 3
+  numberOfPedestrians: 200
   pedestriansSpawnPoints:
   - {fileID: 1183124198}
   - {fileID: 745103805}
   - {fileID: 1286291135}
-  maxDestinyTimePedestrians: 2
+  maxDestinyTimePedestrians: 5
   chaosChance: 2
   maxChaosTime: 10
   blinkSpeed: 5
@@ -3861,7 +3861,7 @@ MonoBehaviour:
   - {fileID: 2088286578}
   - {fileID: 48753355}
   carsToGetDrunks: []
-  carsToSpawn: 100
+  carsToSpawn: 5
   carPrefab: {fileID: 5080148552923016667, guid: ef3648b6eaee8ec46b187207cfa9009a,
     type: 3}
   timeForCarToSpawn: 2
@@ -4212,7 +4212,7 @@ PrefabInstance:
     - target: {fileID: 8205557791422884851, guid: 09252bf5fc69f0a40b68da9260e9f1bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: -105.2
       objectReference: {fileID: 0}
     - target: {fileID: 8205557791422884851, guid: 09252bf5fc69f0a40b68da9260e9f1bc,
         type: 3}
@@ -4222,7 +4222,7 @@ PrefabInstance:
     - target: {fileID: 8205557791422884851, guid: 09252bf5fc69f0a40b68da9260e9f1bc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2
+      value: 87.3
       objectReference: {fileID: 0}
     - target: {fileID: 8205557791422884851, guid: 09252bf5fc69f0a40b68da9260e9f1bc,
         type: 3}
@@ -4280,7 +4280,7 @@ PrefabInstance:
     - target: {fileID: 8772917256255498512, guid: 4595f298f70de7d4ba37db32f2c3d58c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.99
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 8772917256255498512, guid: 4595f298f70de7d4ba37db32f2c3d58c,
         type: 3}
@@ -4290,7 +4290,7 @@ PrefabInstance:
     - target: {fileID: 8772917256255498512, guid: 4595f298f70de7d4ba37db32f2c3d58c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.18
+      value: 8.4
       objectReference: {fileID: 0}
     - target: {fileID: 8772917256255498512, guid: 4595f298f70de7d4ba37db32f2c3d58c,
         type: 3}
@@ -4435,7 +4435,7 @@ PrefabInstance:
     - target: {fileID: 2115161418691125626, guid: 381fed535ccc227408d232ddd516a5d5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.36
+      value: -152.3
       objectReference: {fileID: 0}
     - target: {fileID: 2115161418691125626, guid: 381fed535ccc227408d232ddd516a5d5,
         type: 3}
@@ -4445,7 +4445,7 @@ PrefabInstance:
     - target: {fileID: 2115161418691125626, guid: 381fed535ccc227408d232ddd516a5d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.69
+      value: 109.8
       objectReference: {fileID: 0}
     - target: {fileID: 2115161418691125626, guid: 381fed535ccc227408d232ddd516a5d5,
         type: 3}
@@ -4521,7 +4521,7 @@ PrefabInstance:
     - target: {fileID: 530298560122353140, guid: ef3648b6eaee8ec46b187207cfa9009a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15.6
       objectReference: {fileID: 0}
     - target: {fileID: 530298560122353140, guid: ef3648b6eaee8ec46b187207cfa9009a,
         type: 3}
@@ -4531,7 +4531,7 @@ PrefabInstance:
     - target: {fileID: 530298560122353140, guid: ef3648b6eaee8ec46b187207cfa9009a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 530298560122353140, guid: ef3648b6eaee8ec46b187207cfa9009a,
         type: 3}
@@ -4576,7 +4576,7 @@ PrefabInstance:
     - target: {fileID: 5080148552923016667, guid: ef3648b6eaee8ec46b187207cfa9009a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
