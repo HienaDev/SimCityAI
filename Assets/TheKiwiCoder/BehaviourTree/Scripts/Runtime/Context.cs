@@ -28,6 +28,7 @@ namespace TheKiwiCoder {
         public StopSignLogic waitingForStopSign;
         public bool readyForNextDestination = true;
         public IsCarDrunk icd;
+        public CheckForAccident cfa;
        
         // Add other game specific systems here
 
@@ -49,6 +50,7 @@ namespace TheKiwiCoder {
             context.trafficCollider = gameObject.GetComponentInChildren<TrafficCollider>();
             context.waitingForStopSign = gameObject.GetComponent<StopSignLogic>();
             context.icd = gameObject.GetComponent<IsCarDrunk>();
+            context.cfa = gameObject.GetComponent<CheckForAccident>();
 
             if(context.agent != null)
                 context.defaultAgentSpeed = context.agent.speed;

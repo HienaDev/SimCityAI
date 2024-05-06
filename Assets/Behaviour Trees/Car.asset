@@ -94,7 +94,7 @@ MonoBehaviour:
   speed: 5
   stoppingDistance: 0.1
   updateRotation: 1
-  acceleration: 40
+  acceleration: 1
   tolerance: 1
 --- !u!114 &-1588147970142374968
 MonoBehaviour:
@@ -118,8 +118,11 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
+  - {fileID: 8089782105684797501}
   - {fileID: -4813974251367322258}
-  - {fileID: 4469860786379507531}
+  - {fileID: 4814933147214870628}
+  - {fileID: 8489444104416914907}
+  - {fileID: -661792622179337094}
   - {fileID: 454232104985686010}
 --- !u!114 &-661792622179337094
 MonoBehaviour:
@@ -166,7 +169,7 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  stoppingSpeed: 8
+  stoppingSpeed: 50
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +200,7 @@ MonoBehaviour:
   - {fileID: 5015011792229671137}
   - {fileID: 454232104985686010}
   - {fileID: 4814933147214870628}
-  - {fileID: 4469860786379507531}
-  - {fileID: 7228615309317228306}
+  - {fileID: 8089782105684797501}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -244,7 +246,7 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  stoppingSpeed: 8
+  stoppingSpeed: 50
 --- !u!114 &4102356535367053118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,30 +271,6 @@ MonoBehaviour:
   child: {fileID: -1588147970142374968}
   restartOnSuccess: 1
   restartOnFailure: 1
---- !u!114 &4469860786379507531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: a36b9e931b412ff4e861848f1799cd30
-  position: {x: 1007.2, y: 397.91907}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-    time: 0
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 4814933147214870628}
-  - {fileID: 7228615309317228306}
 --- !u!114 &4814933147214870628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,11 +313,6 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  waypoints:
-  - {fileID: 1878492817595874517, guid: a64eb8d3a9e565743a2ea75cf9063670, type: 3}
-  - {fileID: 3871130608863021810, guid: ec33f67a1059cfd428aaa3aef8baa520, type: 3}
-  - {fileID: 1205706384495927423, guid: 99c993e638aafb4439f0cc83f055e21e, type: 3}
-  - {fileID: 360940954138396051, guid: af21520ae69eee144af5b3f9b376e873, type: 3}
 --- !u!114 &6804818117419679461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +356,7 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
---- !u!114 &7228615309317228306
+--- !u!114 &8089782105684797501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,21 +365,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
-  m_Name: Selector
+  m_Script: {fileID: 11500000, guid: d0042068f76006c4a81cf3ec5ccd5dd5, type: 3}
+  m_Name: AccidentCheck
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 35a47064db8adfa4d8720e9c83c817e2
-  position: {x: 1081.5997, y: 564.7999}
+  guid: 2593e3679eb36b148baf3dc67f11671d
+  position: {x: -524.80005, y: 481.59998}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
   description: 
   drawGizmos: 0
-  children:
-  - {fileID: 8489444104416914907}
-  - {fileID: -661792622179337094}
 --- !u!114 &8489444104416914907
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class CheckIfCarDrunk : ActionNode
+public class AccidentCheck : ActionNode
 {
     protected override void OnStart() {
     }
@@ -12,10 +12,10 @@ public class CheckIfCarDrunk : ActionNode
     }
 
     protected override State OnUpdate() {
-        if(context.icd.isDrunk)
+
+        if(context.cfa.Accident)
             return State.Success;
 
         return State.Failure;
-
     }
 }

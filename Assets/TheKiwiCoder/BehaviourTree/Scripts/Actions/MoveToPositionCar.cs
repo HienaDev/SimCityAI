@@ -15,10 +15,10 @@ public class MoveToPositionCar : ActionNode
     protected override void OnStart()
     {
         //context.agent.stoppingDistance = stoppingDistance;
-        context.agent.speed = speed;
+        //context.agent.speed = speed;
         context.agent.destination = blackboard.moveToPosition;
-        context.agent.updateRotation = updateRotation;
-        context.agent.acceleration = acceleration;
+        //context.agent.updateRotation = updateRotation;
+        //context.agent.acceleration = acceleration;
     }
 
     protected override void OnStop()

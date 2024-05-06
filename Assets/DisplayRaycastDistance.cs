@@ -26,12 +26,31 @@ public class DisplayRaycastDistance : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        collision = true;
-        collisionObject = other.gameObject;
+        if (!other.gameObject.CompareTag("Lane"))
+        {
+            collision = true;
+            collisionObject = other.gameObject;
+            Debug.Log(other.gameObject.name);
+        }
+            
+        
+        
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
+       
+            
+            Debug.Log(other.gameObject.name);
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+            
+            Debug.Log(other.gameObject.name);
         
     }
 }

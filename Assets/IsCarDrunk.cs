@@ -22,7 +22,7 @@ public class IsCarDrunk : MonoBehaviour
 
         foreach (Transform t in model)
         {
-            Debug.Log(t.gameObject.name);
+            //Debug.Log(t.gameObject.name);
             MeshRenderer mr = t.GetComponent<MeshRenderer>();
             if (mr != null)
                 renderers.Add(mr);

@@ -23,10 +23,9 @@ public class CheckForCollision : ActionNode
             StopSign stopS = context.drd.collisionObject.GetComponent<StopSign>();
             if (stopS == null)
             { 
-                Debug.DrawRay(new Vector3(context.gameObject.transform.position.x, context.gameObject.transform.position.y + 2, context.gameObject.transform.position.z), context.gameObject.transform.forward * distance, Color.red);
                 if (context.drd.collision)
                 {
-                    Debug.Log("collision");
+                    Debug.Log(context.drd.collisionObject.name);
 
                     return State.Success;
                 }

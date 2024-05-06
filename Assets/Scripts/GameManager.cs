@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     private WaitForSeconds wfsCar;
     [SerializeField] private Vector2 timeForCarsToMove;
     
-    public GameObject[] Waypoints { get; private set; }
+    public GameObject[] CarWaypoints => waypoints;
 
     private int numberOfActivePedestrians = 0;
 

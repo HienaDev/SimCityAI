@@ -18,7 +18,7 @@ public class StopSign : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
         StopSignLogic ssl = other.gameObject.GetComponent<StopSignLogic>();
         if (ssl != null)
         {

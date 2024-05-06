@@ -372,10 +372,6 @@ MonoBehaviour:
     time: 0
   description: 
   drawGizmos: 0
-  waypoints:
-  - {fileID: 4408972677529495300, guid: 09252bf5fc69f0a40b68da9260e9f1bc, type: 3}
-  - {fileID: 8067514999068541083, guid: 381fed535ccc227408d232ddd516a5d5, type: 3}
-  - {fileID: 331847975015394785, guid: 4595f298f70de7d4ba37db32f2c3d58c, type: 3}
 --- !u!114 &5241477754440959864
 MonoBehaviour:
   m_ObjectHideFlags: 0
