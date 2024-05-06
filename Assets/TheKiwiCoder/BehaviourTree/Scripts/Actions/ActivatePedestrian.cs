@@ -12,7 +12,7 @@ public class ActivatePedestrian : ActionNode
     }
 
     protected override State OnUpdate() {
-        context.ActivateAllMeshRenderers();
+        context.ActivateAgent();
 
         context.gameManager.AddPedestrian();
 

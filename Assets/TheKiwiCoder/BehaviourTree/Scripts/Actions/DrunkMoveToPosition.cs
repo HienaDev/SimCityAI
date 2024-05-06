@@ -24,7 +24,7 @@ public class DrunkMoveToPosition : ActionNode
             return State.Running;
         }
 
-        if (context.agent.remainingDistance <= 0) {
+        if (context.agent.remainingDistance <= 1f) {
             return State.Success;
         }
         else { 

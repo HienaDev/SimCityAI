@@ -11,7 +11,7 @@ public class DeactivatePedestrian : ActionNode
     }
 
     protected override State OnUpdate() {
-        context.DeactivateAllMeshRenderers();
+        context.DeactivateAgent();
 
         context.gameManager.RemovePedestrian();
 

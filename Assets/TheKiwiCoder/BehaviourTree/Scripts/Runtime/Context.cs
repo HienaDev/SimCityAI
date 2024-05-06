@@ -12,13 +12,11 @@ namespace TheKiwiCoder {
     public class Context {
         public GameObject gameObject;
         public Transform transform;
+        public Collider collider;
         public Animator animator;
         public Rigidbody physics;
         public NavMeshAgent agent;
         public float defaultAgentSpeed;
-        public SphereCollider sphereCollider;
-        public BoxCollider boxCollider;
-        public CapsuleCollider capsuleCollider;
         public CharacterController characterController;
         public PedestrianController pedestrianController;
         public Renderer renderer;
@@ -38,12 +36,10 @@ namespace TheKiwiCoder {
             Context context = new Context();
             context.gameObject = gameObject;
             context.transform = gameObject.transform;
+            context.collider = gameObject.GetComponent<Collider>();
             context.animator = gameObject.GetComponent<Animator>();
             context.physics = gameObject.GetComponent<Rigidbody>();
             context.agent = gameObject.GetComponent<NavMeshAgent>();
-            context.sphereCollider = gameObject.GetComponent<SphereCollider>();
-            context.boxCollider = gameObject.GetComponent<BoxCollider>();
-            context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.pedestrianController = gameObject.GetComponent<PedestrianController>(); 
             context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
@@ -69,19 +65,28 @@ namespace TheKiwiCoder {
         /// <summary>
         /// Deactivate all agent's mesh renderers.
         /// </summary>
-        public void DeactivateAllMeshRenderers() {
-            foreach (MeshRenderer meshRenderer in meshRenderers) {
+        public void DeactivateAgent() {
+            foreach (MeshRenderer meshRenderer in meshRenderers)
                 meshRenderer.enabled = false;
-            }
+
+            if (collider != null)
+                collider.enabled = false;
+
+            if (agent != null)
+                agent.enabled = false;
         }
 
         /// <summary>
         /// Activate all agent's mesh renderers.
         /// </summary>
-        public void ActivateAllMeshRenderers() {
-            foreach (MeshRenderer meshRenderer in meshRenderers) {
+        public void ActivateAgent() {
+            foreach (MeshRenderer meshRenderer in meshRenderers)
                 meshRenderer.enabled = true;
-            }
+            if (collider != null)
+                collider.enabled = true;
+            
+            if (agent != null)
+                agent.enabled = true;
         }
 
         /// <summary>

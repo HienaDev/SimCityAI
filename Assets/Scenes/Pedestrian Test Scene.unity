@@ -308,7 +308,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2f73d7299e3b9c54ea7d8ab969a66a88, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: dc04335014b992646bf4913ca52e15e6, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &157853649
 Transform:
@@ -654,11 +654,17 @@ MonoBehaviour:
   - {fileID: 334774728}
   - {fileID: 1239208950}
   - {fileID: 2050413822}
-  maxDestinyTimePedestrians: 2
+  maxDestinyTimePedestrians: 5
   chaosChance: 2
   maxChaosTime: 10
   blinkSpeed: 5
   maxAccidentTime: 10
+  waypoints: []
+  carsToGetDrunks: []
+  carsToSpawn: 0
+  carPrefab: {fileID: 0}
+  timeForCarToSpawn: 0
+  timeForCarsToMove: {x: 0, y: 0}
 --- !u!1 &931841389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,7 +1479,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 7d07722097ea52b49a8195d0ec18143a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: fd32e09a35f282d4cb4fa7894a938ade, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &2004757732
 Transform:

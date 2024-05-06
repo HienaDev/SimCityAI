@@ -20,36 +20,14 @@ public class PedestrianController : MonoBehaviour
     public bool HasAccident { get => hasAccident; set => hasAccident = value; }
 
     /// <summary>
-    /// Deactivate all mesh renderers.
-    /// </summary>
-    public void DeactivateAllMeshRenderers()
-    {
-        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer meshRenderer in meshRenderers)
-        {
-            meshRenderer.enabled = false;
-        }
-    }
-
-    /// <summary>
-    /// Activate all mesh renderers.
-    /// </summary>
-    public void ActivateAllMeshRenderers()
-    {
-        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer meshRenderer in meshRenderers)
-        {
-            meshRenderer.enabled = true;
-        }
-    }
-
-    /// <summary>
     /// Change of the pedestrian getting drunk.
     /// </summary>
     /// <param name="chaosChance"> Change from the pedestrian getting drunk </param>
     public void ChangeOfGettingDrunk(float chaosChance)
     {
-        if (Random.Range(0f, 100f) < chaosChance)
+        float chance = Random.Range(0f, 100f);
+
+        if (chance < chaosChance)
         {
             SetDrunkState(true);
         }

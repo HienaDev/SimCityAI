@@ -3861,7 +3861,7 @@ MonoBehaviour:
   - {fileID: 2088286578}
   - {fileID: 48753355}
   carsToGetDrunks: []
-  carsToSpawn: 10
+  carsToSpawn: 100
   carPrefab: {fileID: 5080148552923016667, guid: ef3648b6eaee8ec46b187207cfa9009a,
     type: 3}
   timeForCarToSpawn: 2
