@@ -4,8 +4,7 @@ using UnityEngine;
 using TheKiwiCoder;
 
 public class RandomWaypoint : ActionNode
-{
-    public GameObject[] waypoints;
+{ 
 
     protected override void OnStart() {
     }
@@ -14,6 +13,8 @@ public class RandomWaypoint : ActionNode
     }
 
     protected override State OnUpdate() {
+        GameObject[] waypoints = context.gameManager.PedestriansWaypoints;
+
         GameObject waypoint = waypoints[Random.Range(0, waypoints.Length)];
         blackboard.moveToPosition.x = waypoint.transform.position.x;
         blackboard.moveToPosition.z = waypoint.transform.position.z;

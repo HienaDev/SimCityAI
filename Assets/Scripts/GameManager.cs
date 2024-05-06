@@ -62,6 +62,10 @@ public class GameManager : MonoBehaviour
     /// Get the max time that an agent can be in accident state
     /// </summary>
     public float GetMaxAccidentTime => maxAccidentTime;
+    /// <summary>
+    /// Get the waypoints of the pedestrians
+    /// </summary>
+    public GameObject[] PedestriansWaypoints => pedestriansSpawnPoints;
 
     /// <summary>
     /// Start the game manager
