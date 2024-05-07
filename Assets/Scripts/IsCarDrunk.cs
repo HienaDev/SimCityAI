@@ -14,7 +14,7 @@ public class IsCarDrunk : MonoBehaviour
     public bool isDrunk = false;
 
     private WaitForSeconds wfs;
-    private List<MeshRenderer> renderers;
+    private List<Renderer> renderers;
     
     /// <summary>
     /// Start is called before the first frame update
@@ -22,12 +22,12 @@ public class IsCarDrunk : MonoBehaviour
     private void Start()
     {
         wfs = new WaitForSeconds(timeDrunk);
-        renderers = new List<MeshRenderer>();
+        renderers = new List<Renderer>();
 
         foreach (Transform t in model)
         {
             //Debug.Log(t.gameObject.name);
-            MeshRenderer mr = t.GetComponent<MeshRenderer>();
+            Renderer mr = t.GetComponent<Renderer>();
             if (mr != null)
                 renderers.Add(mr);
         }
@@ -71,7 +71,7 @@ public class IsCarDrunk : MonoBehaviour
     /// </summary>
     public void TurnGreen()
     {
-        foreach (MeshRenderer renderer in renderers)
+        foreach (Renderer renderer in renderers)
         {
             renderer.material.color = Color.green;
         }
@@ -82,7 +82,7 @@ public class IsCarDrunk : MonoBehaviour
     /// </summary>
     public void TurnWhite()
     {
-        foreach (MeshRenderer renderer in renderers)
+        foreach (Renderer renderer in renderers)
         {
             renderer.material.color = Color.white;
         }
@@ -93,7 +93,7 @@ public class IsCarDrunk : MonoBehaviour
     /// </summary>
     public void TurnRed()
     {
-        foreach (MeshRenderer renderer in renderers)
+        foreach (Renderer renderer in renderers)
         {
             renderer.material.color = Color.red;
         }
@@ -104,7 +104,7 @@ public class IsCarDrunk : MonoBehaviour
     /// </summary>
     public void DeactivateMesh()
     {
-        foreach (MeshRenderer renderer in renderers)
+        foreach (Renderer renderer in renderers)
         {
             renderer.enabled = false;
         }
@@ -115,7 +115,7 @@ public class IsCarDrunk : MonoBehaviour
     /// </summary>
     public void ActivateMesh()
     {
-        foreach (MeshRenderer renderer in renderers)
+        foreach (Renderer renderer in renderers)
         {
             renderer.enabled = true;
         }
