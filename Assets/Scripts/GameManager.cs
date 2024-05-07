@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -24,18 +25,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float maxAccidentTime;
 
     [Header("[CARS]")]
-    [SerializeField] private GameObject[] carWaypoints;
-    private int[] carsToSpawnInEachWaypoint;
-    private List<IsCarDrunk> carsToGetDrunks;
-    [SerializeField] private float carsToSpawn;
     [SerializeField] private GameObject[] carPrefab;
+    [SerializeField] private float numberOfCars;
+    [SerializeField] private GameObject[] carSpawnPoints;
+    private int[] numberOfCarsInEachWaypoint;
+    private List<IsCarDrunk> carsToGetDrunks;
+    
+    
     [SerializeField] private float timeForCarToSpawn;
     private WaitForSeconds wfsCar;
-    [SerializeField] private Vector2 timeForCarsToMove;
     
-    public GameObject[] CarWaypoints => carWaypoints;
+    public GameObject[] CarWaypoints => carSpawnPoints;
+
+    [Header("[UI]")]
+    [SerializeField] private TextMeshProUGUI carsText;
+    [SerializeField] private TextMeshProUGUI pedestriansText;
 
     private int numberOfActivePedestrians = 0;
+    private int numberOfActiveCars = 0;
 
     /// <summary>
     /// Singleton instance
@@ -94,24 +101,24 @@ public class GameManager : MonoBehaviour
 
         spawnedPedestrians = new List<PedestrianController>();
 
-        carsToSpawnInEachWaypoint = new int[carWaypoints.Length];
+        numberOfCarsInEachWaypoint = new int[carSpawnPoints.Length];
 
         for (int i = 0; i < numberOfPedestrians; i++)
         {
             StartCoroutine(SpawnPedestrianAtRandomTime());
         }
 
-        for (int i = 0; i < carsToSpawn; i++)
+        for (int i = 0; i < numberOfCars; i++)
         {
-            int waypointToSpawn = UnityEngine.Random.Range(0, carWaypoints.Length);
-            carsToSpawnInEachWaypoint[waypointToSpawn]++;
+            int waypointToSpawn = UnityEngine.Random.Range(0, carSpawnPoints.Length);
+            numberOfCarsInEachWaypoint[waypointToSpawn]++;
 
         }
 
         wfsCar = new WaitForSeconds(timeForCarToSpawn);
 
 
-        for (int i = 0; i < carWaypoints.Length; i++)
+        for (int i = 0; i < carSpawnPoints.Length; i++)
         {
             StartCoroutine(SpawnCarsAtWaypoints(i));
 
@@ -170,10 +177,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnCarsAtWaypoints(int n)
     {
-        while (carsToSpawnInEachWaypoint[n] > 0)
+        while (numberOfCarsInEachWaypoint[n] > 0)
         {
-            carsToSpawnInEachWaypoint[n]--;
-            GameObject car = Instantiate(carPrefab[UnityEngine.Random.Range(0, carPrefab.Length)], carWaypoints[n].transform.position, Quaternion.identity, transform);
+            numberOfCarsInEachWaypoint[n]--;
+            GameObject car = Instantiate(carPrefab[UnityEngine.Random.Range(0, carPrefab.Length)], carSpawnPoints[n].transform.position, Quaternion.identity, transform);
             carsToGetDrunks.Add(car.GetComponent<IsCarDrunk>());
             yield return wfsCar;
         }
@@ -193,7 +200,7 @@ public class GameManager : MonoBehaviour
         GameObject pedestrian = Instantiate(pedestrianPrefab[UnityEngine.Random.Range(0, pedestrianPrefab.Length)], spawnPoint.transform.position, Quaternion.identity);
         pedestrian.GetComponentInChildren<Renderer>().material = new Material(pedestrian.GetComponentInChildren<Renderer>().material);
         pedestrian.GetComponentInChildren<Renderer>().material.color = UnityEngine.Random.ColorHSV();
-        numberOfActivePedestrians++;
+        AddPedestrian();
         spawnedPedestrians.Add(pedestrian.GetComponent<PedestrianController>());
     }
 
@@ -202,7 +209,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void AddPedestrian()
     {
+        
         numberOfActivePedestrians++;
+        pedestriansText.text = $"Number of pedestrians: {numberOfActivePedestrians}";
     }
 
     /// <summary>
@@ -211,6 +220,26 @@ public class GameManager : MonoBehaviour
     public void RemovePedestrian()
     {
         numberOfActivePedestrians--;
+        pedestriansText.text = $"Number of pedestrians: {numberOfActivePedestrians}";
+    }
+
+    /// <summary>
+    /// Add a car to the count
+    /// </summary>
+    public void AddCar()
+    {
+
+        numberOfActiveCars++;
+        carsText.text = $"Number of cars: {numberOfActiveCars}";
+    }
+
+    /// <summary>
+    /// Remove a car from the count
+    /// </summary>
+    public void RemoveCar()
+    {
+        numberOfActiveCars--;
+        carsText.text = $"Number of pedestrians: {numberOfActiveCars}";
     }
 
     /// <summary>

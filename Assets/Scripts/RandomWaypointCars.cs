@@ -22,6 +22,7 @@ public class RandomWaypointCars : ActionNode
         {
             context.readyForNextDestination = false;
             context.collider.enabled = true;
+            context.gameManager.AddCar();
             context.icd.ActivateMesh();
             context.agent.enabled = true;
             GameObject waypoint = context.gameManager.CarWaypoints[Random.Range(0, context.gameManager.CarWaypoints.Length)];
