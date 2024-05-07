@@ -10,13 +10,15 @@ public class DisplayRaycastDistance : MonoBehaviour
     public GameObject collisionObject;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         collisionObject = null;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// We check with a raycast if we are colliding with an object that isn't us
+    /// </summary>
+    private void Update()
     {
 
         collision = false;
@@ -31,13 +33,11 @@ public class DisplayRaycastDistance : MonoBehaviour
             collisionObject = hit.collider.gameObject;
             if ((collisionObject.transform != gameObject.transform))
             {
-                //Debug.Log(collisionObject.name + " collided with on script " + gameObject.name);
                 collision = true;
             }
 
 
         }
-
 
     }
 }

@@ -16,26 +16,7 @@ public class IsCarDrunk : MonoBehaviour
 
     
 
-    private void Start()
-    {
-        wfs = new WaitForSeconds(timeDrunk);
-        renderers = new List<MeshRenderer>();
-
-        
-
-        foreach (Transform t in model)
-        {
-            //Debug.Log(t.gameObject.name);
-            MeshRenderer mr = t.GetComponent<MeshRenderer>();
-            if (mr != null)
-                renderers.Add(mr);
-        }
-    }
-
-    private void Update()
-    {
-
-    }
+    
 
     private void FixedUpdate()
     {

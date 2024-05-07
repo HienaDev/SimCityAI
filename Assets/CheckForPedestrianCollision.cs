@@ -17,12 +17,20 @@ public class CheckForPedestrianCollision : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// If we are no longer colliding with a pedestrian the boolean changes so that the car can move
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Pedestrian"))
             PedestrianCollision = false;
     }
 
+    /// <summary>
+    /// If we are colliding with a pedestrian the boolean changes so that the car stops moving
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Pedestrian"))
