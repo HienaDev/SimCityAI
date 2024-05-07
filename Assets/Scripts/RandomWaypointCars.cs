@@ -25,6 +25,12 @@ public class RandomWaypointCars : ActionNode
             context.icd.ActivateMesh();
             context.agent.enabled = true;
             GameObject waypoint = context.gameManager.CarWaypoints[Random.Range(0, context.gameManager.CarWaypoints.Length)];
+
+            if (Vector3.Distance(context.gameObject.transform.position, waypoint.transform.position) < 50 ) 
+            { 
+                return State.Running;
+            }
+
             blackboard.moveToPosition.x = waypoint.transform.position.x;
             blackboard.moveToPosition.z = waypoint.transform.position.z;
             return State.Success;

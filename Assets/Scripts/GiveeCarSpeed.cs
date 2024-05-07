@@ -12,8 +12,8 @@ public class GiveeCarSpeed : ActionNode
     }
 
     protected override State OnUpdate() {
-       Debug.Log(context.defaultAgentSpeed);
-        Debug.Log(context.agent.acceleration);
+       //Debug.Log(context.defaultAgentSpeed);
+        //Debug.Log(context.agent.acceleration);
         if (context.agent.speed < context.defaultAgentSpeed)
         {
             context.agent.speed += context.agent.acceleration * Time.deltaTime;

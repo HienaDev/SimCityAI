@@ -14,8 +14,8 @@ public class AccidentCheck : ActionNode
     protected override State OnUpdate() {
 
         if(context.cfa.Accident)
-        { 
-            context.icd.TurnGreen();
+        {
+            context.Blink();
             return State.Success;
         }
         if(!context.icd.isDrunk)

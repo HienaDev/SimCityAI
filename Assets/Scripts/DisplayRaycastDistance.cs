@@ -24,37 +24,7 @@ public class DisplayRaycastDistance : MonoBehaviour
 
         RaycastHit hit;
         Debug.DrawRay(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward * distance, Color.red);
-        Debug.DrawRay(new Vector3(gameObject.transform.position.x - 1.5f, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward * distance, Color.red);
-        Debug.DrawRay(new Vector3(gameObject.transform.position.x + 1.5f, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward * distance, Color.red);
-        Debug.DrawRay(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z - 1.5f), gameObject.transform.forward * distance, Color.red);
-        Debug.DrawRay(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z + 1.5f), gameObject.transform.forward * distance, Color.red);
 
-        if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward, out hit, distance))
-        {
-            collisionObject = hit.collider.gameObject;
-
-            if ((collisionObject.transform != gameObject.transform))
-            {
-                //Debug.Log(collisionObject.name + " collided with on script " + gameObject.name);
-                collision = true;
-            }
-            
-
-            
-        }
-
-        if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward, out hit, distance))
-        {
-            collisionObject = hit.collider.gameObject;
-
-            if ((collisionObject.transform != gameObject.transform))
-            {
-                //Debug.Log(collisionObject.name + " collided with on script " + gameObject.name);
-                collision = true;
-            }
-
-
-        }
 
         if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward, out hit, distance))
         {
@@ -68,29 +38,6 @@ public class DisplayRaycastDistance : MonoBehaviour
 
         }
 
-        if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z - 1.5f), gameObject.transform.forward, out hit, distance))
-        {
-            collisionObject = hit.collider.gameObject;
-            if ((collisionObject.transform != gameObject.transform))
-            {
-                //Debug.Log(collisionObject.name + " collided with on script " + gameObject.name);
-                collision = true;
-            }
-
-
-        }
-
-        if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z + 1.5f), gameObject.transform.forward, out hit, distance))
-        {
-            collisionObject = hit.collider.gameObject;
-            if ((collisionObject.transform != gameObject.transform))
-            {
-                //Debug.Log(collisionObject.name + " collided with on script " + gameObject.name);
-                collision = true;
-            }
-
-
-        }
 
     }
 }

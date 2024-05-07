@@ -100,7 +100,8 @@ namespace TheKiwiCoder {
             float blinkSpeed = gameManager.GetBlinkSpeed;
             float lerpFactor = Mathf.PingPong(Time.time * blinkSpeed, 1);
 
-            renderer.material.color = Color.Lerp(originalColor, Color.red , lerpFactor);
+            foreach (Renderer meshRenderer in meshRenderers)
+                meshRenderer.material.color = Color.Lerp(originalColor, Color.red , lerpFactor);
         }
     }
 }
