@@ -35,6 +35,51 @@ A pesquisa para este projeto incluiu uma revisão de estudos e trabalhos recente
 
 ## Estado da Arte
 
+Nesta secção, iremos apresentar uma pequena pesquisa feita sobre este tipo de simulações, com recurso a trabalhos semelhante, descrevendo-os e comparando-os com o nosso trabalho.
+
+### *The Action Point Angle of Sight: A Traffic Generation Method for Driving Simulation, as a Small Step to Safe, Sustainable and Smart Cities*
+
+Este trabalho aborda o desenvolvimento de um gerador de tráfego para simulações de condução, denominado "*Action Point Angle of Sight*" (APAS), que visa aprimorar a autenticidade das simulações de tráfego usadas para testar veículos autónomos e melhorar a segurança rodoviária. Este método é projetado para integrar-se com simuladores de condução modernos, oferecendo uma abordagem mais naturalista e precisa para a geração de tráfego em ambientes urbanos.
+
+A principal inovação do APAS é a sua capacidade de simular interações baseadas em física entre veículos, infraestruturas e condições ambientais variáveis, como o clima. Utiliza modelos avançados que permitem a simulação de comportamentos de tráfego realistas, como a observância das regras de trânsito e a reação a fatores estocásticos, como veículos aleatórios e variações de velocidade. Ao contrário de simuladores tradicionais que frequentemente reciclam tecnologias antigas e apresentam limitações na representação de fluxos de tráfego mistos e caóticos, o APAS foi desenvolvido para superar essas barreiras, oferecendo uma ferramenta robusta e versátil para o estudo e planeamento de tráfego urbano. [[3]](https://www.researchgate.net/publication/371605221_The_Action_Point_Angle_of_Sight_A_Traffic_Generation_Method_for_Driving_Simulation_as_a_Small_Step_to_Safe_Sustainable_and_Smart_Cities)
+
+#### **Comparação com o nosso projeto**
+
+- **Abordagem de Simulação de Tráfego:**
+  - Ambos os projetos visam aprimorar as simulações de tráfego, mas o nosso projeto foca a criação de um ambiente urbano com múltiplos tipos de agentes, utilizando behavior trees para modelar uma gama variada de comportamentos de tráfego, incluindo a interação entre veículos e peões. Por outro lado, o APAS desenvolve um método específico que melhora a geração de fluxos de tráfego mistos e realistas, focando-se na precisão dos movimentos e nas respostas dos veículos autonomos em condições variadas de tráfego.
+- **Integração de Comportamentos Realistas:**
+  - O nosso projeto implementa uma abordagem para simular comportamentos de tráfego e interações entre agentes, destacando-se na modelação de cenários urbanos dinâmicos. O APAS, por sua vez, concentra-se na utilização de uma nova fórmula teórica para simular de forma eficaz os comportamentos de veículos em resposta a variáveis estocásticas, como veículos aleatórios e variações de velocidade, visando uma simulação que se aproxima das condições reais de condução.
+
+### *Creating an Interactive Urban Traffic System for the Simulation of Different Traffic Scenarios*
+
+Este trabalho explora a criação de um sistema de tráfego urbano interativo utilizando a realidade virtual (VR) para simular diferentes cenários de tráfego numa cidade modelo da Europa Central. Utilizando *engine* Unity, os autores desenvolveram um ambiente virtual imersivo que permite aos utilizadores experimentar condições de tráfego dinâmicas de forma visual e interativa. O foco do sistema é proporcionar uma plataforma que possa visualizar e simular a complexa interação entre peões, transporte individual e público.
+
+A principal inovação apresentada é o uso de um sistema de tráfego modular e personalizável dentro do Unity, que reage ao comportamento individual dos utilizadores, incluindo a movimentação do avatar. Isto é crucial para evitar acidentes ou congestionamentos de tráfego irremediáveis. Esta ferramenta elimina a necessidade de software de terceiros, tornando-a uma opção valiosa para desenvolvedores que procuram implementar sistemas de tráfego em ambientes virtuais imersivos. 
+
+A metodologia aplicada baseia-se nas capacidades atuais do Unity, permitindo a criação de objetos 3D. O sistema de tráfego emprega uma rede de waypoints, onde os veículos seguem rotas predeterminadas, interagindo com semáforos e outros elementos do tráfego conforme programado. Este sistema também permite ajustes em tempo real dos parâmetros de tráfego para refletir mudanças no cenário simulado. [[4]](https://www.mdpi.com/2076-3417/13/10/6020)
+
+#### **Comparação com o nosso projeto**
+
+- **Flexibilidade e Parametrização:**
+  - Ambos os projetos oferecem sistemas de tráfego onde os parâmetros podem ser ajustados pelos utilizadores para modificar cenários de tráfego, destacando-se pela capacidade de responderem a ajustes definidos pelo utilizador para refletir diferentes condições urbanas.
+- **Interação e Realismo no Tráfego:**
+  - O nosso projeto e o sistema descrito no artigo investem em criar simulações que capturam interações realistas entre os componentes do tráfego. Ambos utilizam técnicas para gerir e simular o movimento de veículos e o comportamento dos agentes em ambientes urbanos com o objetivo de aumentar o realismo da simulação.
+
+### *Project Westdrive: Unity City With Self-Driving Cars and Pedestrians for Virtual Reality Studies*
+
+Este estudo introduz o projeto "*Westdrive*", uma cidade virtual desenvolvida no Unity para estudos em realidade virtual, focada em navegação espacial e aspetos éticos de decisões em ambientes urbanos. A cidade virtual de *Westdrive* abrange uma área de 230 hectares e inclui até 150 veículos autónomos e 655 pedestres ativos e passivos, além de milhares de elementos naturais para criar um ambiente dinâmico e realista.
+
+O projeto é open-source e modular, construído para ser facilmente adaptável às necessidades variadas de experimentos científicos. Oferece uma ferramenta chamada "*City AI toolkit*" que permite aos utilizadores criar avatares e personalizar veículos sem necessidade de conhecimento prévio em programação, facilitando o uso de suas funcionalidades integradas no *engine* Unity.
+
+A estrutura do projeto permite uma implementação simples de ambientes complexos, onde todos os componentes podem ser usados independentemente. A simulação envolve elementos estáticos, como edifícios e árvores, e dinâmicos, como veículos e pedestres que se movem de acordo com scripts programáveis. A interação dos objetos é controlada por um conjunto de ferramentas que administram os percursos, os veículos e os comportamentos dos pedestres dentro da simulação. [[5]](https://www.frontiersin.org/articles/10.3389/fict.2020.00001/full)
+
+#### **Comparação com o nosso projeto**
+
+- **Modularidade e Personalização:**
+  - O nosso projeto permite a personalização de cenários de tráfego e comportamentos de agentes, o que é semelhante ao *Westdrive*. No entanto, o *Westdrive* destaca-se pela sua estrutura altamente modular e scriptável, que facilita a adaptação às necessidades específicas de diferentes estudos de pesquisa, oferecendo um toolkit que permite aos usuários modificar avatares e veículos sem programação direta.
+- **Facilidade de Implementação e Adaptação:**
+  - O Westdrive oferece uma plataforma que minimiza as barreiras técnicas para a configuração de experimentos, integrando todas as funções principais na interface gráfica do Unity e permitindo modificações sem codificação direta. O nosso projeto, embora possa exigir um conhecimento técnico mais profundo para personalizações e ajustes, oferece uma flexibilidade para adaptar o comportamento do tráfego conforme necessário.
+
 ## Metadologia
 
 A implementação deste trabalho foi feito em 3D, utilizando o *game engine* Unity. A simulação é feita numa cidade com ruas, estradas, passeios e passadeiras.
@@ -88,3 +133,7 @@ O *Game Manager* é o objeto que controla o estado, antes e durante, da simulaç
 
 - [1] TheKiwiCoder. (2021, July 16). Free behaviour Tree editor for Unity. YouTube. https://www.youtube.com/watch?v=SgrG6uAZDHE 
 - [2] TheKiwiCoder. (2021, July 16). Behaviour Tree. https://www.thekiwicoder.com/behaviour-tree 
+- [3] Do, S., Kemanji, K., Vinh, M., & Tuan, V. (2023, June). The Action Point Angle of Sight: A Traffic Generation Method for Driving Simulation, as a Small Step to Safe, Sustainable and Smart Cities. ResearchGate. https://www.researchgate.net/publication/371605221_The_Action_Point_Angle_of_Sight_A_Traffic_Generation_Method_for_Driving_Simulation_as_a_Small_Step_to_Safe_Sustainable_and_Smart_Cities 
+- [4] Weißmann, M., Edler, D., Keil, J., & Dickmann, F. (2023, May 13). Creating an interactive urban traffic system for the simulation of different traffic scenarios. MDPI. https://www.mdpi.com/2076-3417/13/10/6020 
+- [5] Nezami, F. N., Wächter, M. A., Pipa, G., & König, P. (2020, January 9). Project westdrive: Unity City with self-driving cars and pedestrians for virtual reality studies. Frontiers. https://www.frontiersin.org/articles/10.3389/fict.2020.00001/full 
+- [6] Yuloskov, A., Bahrami, M., Mazzara, M., & Kotorov, I. (2022, June). Traffic light algorithms in Smart Cities: Simulation and analysis. ResearchGate. https://www.researchgate.net/publication/361845379_Traffic_Light_Algorithms_in_Smart_Cities_Simulation_and_Analysis 
