@@ -144,6 +144,12 @@ public class GameManager : MonoBehaviour
         carsToGetDrunks = new List<IsCarDrunk>();
 
         spawnedPedestrians = new List<PedestrianController>();
+
+        numberOfActivePedestrians = 0;
+        numberOfActiveCars = 0;
+
+        pedestriansText.text = $"Number of pedestrians: {numberOfActivePedestrians}";
+        carsText.text = $"Number of pedestrians: {numberOfActiveCars}";
     }
 
 
