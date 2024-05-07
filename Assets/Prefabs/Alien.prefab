@@ -1991,7 +1991,7 @@ GameObject:
   - component: {fileID: 1377370717399214564}
   - component: {fileID: 8558230206352491959}
   m_Layer: 7
-  m_Name: Alien 2
+  m_Name: Alien
   m_TagString: Pedestrian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
