@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 672838521515287452}
   - component: {fileID: 5540842704466455246}
   m_Layer: 6
-  m_Name: "Mex..087_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6653670729761157093}
   - component: {fileID: 8853027951710618649}
   m_Layer: 6
-  m_Name: "Mex..080_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 7892713075851751357}
   - component: {fileID: 7924936990996614250}
   m_Layer: 6
-  m_Name: "Mex..174_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 8124021612235482515}
   - component: {fileID: 4086045312336415919}
   m_Layer: 6
-  m_Name: "Mex..180_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 8896383260536547960}
   - component: {fileID: 7532475100348060018}
   m_Layer: 6
-  m_Name: "Mex..156_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 6135794912285897939}
   - component: {fileID: 6509070310264118814}
   m_Layer: 6
-  m_Name: "Mex..014_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 5069400173596811047}
   - component: {fileID: 4971560590439564485}
   m_Layer: 6
-  m_Name: "Mex..015_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.005"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 8884182863238661366}
   - component: {fileID: 8723190883067422770}
   m_Layer: 6
-  m_Name: "Mex..093_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 5370532104429483641}
   - component: {fileID: 4497554537620699567}
   m_Layer: 6
-  m_Name: "Mex..182_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 9058604137155218713}
   - component: {fileID: 7618327202621432718}
   m_Layer: 6
-  m_Name: "Mex..017_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 3661013526038219946}
   - component: {fileID: 7266810941584129376}
   m_Layer: 6
-  m_Name: "Mex888_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 6349599909956300283}
   - component: {fileID: 2323024682333714635}
   m_Layer: 6
-  m_Name: "Mex1234_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 7066081972248398094}
   - component: {fileID: 1758037117250240313}
   m_Layer: 6
-  m_Name: "Mex..181_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 2405972364853750427}
   - component: {fileID: 2202060077265522103}
   m_Layer: 6
-  m_Name: "Mex..189_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 4728920717233274823}
   - component: {fileID: 7734418303729139394}
   m_Layer: 6
-  m_Name: "Mex..186_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 5615131107079937775}
   - component: {fileID: 1194520551871685504}
   m_Layer: 6
-  m_Name: "Mex..101_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 3738424249540351212}
   - component: {fileID: 8492684295922296457}
   m_Layer: 6
-  m_Name: "Mex..991_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1423,7 +1423,7 @@ GameObject:
   - component: {fileID: 4419668319214087948}
   - component: {fileID: 2517468584339628859}
   m_Layer: 6
-  m_Name: "Mex..023_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1506,7 +1506,7 @@ GameObject:
   - component: {fileID: 5639300075896747904}
   - component: {fileID: 6316784447469121178}
   m_Layer: 6
-  m_Name: "Mex..066_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1589,7 +1589,7 @@ GameObject:
   - component: {fileID: 1303528231764223663}
   - component: {fileID: 2594695845639230227}
   m_Layer: 6
-  m_Name: "Mex..153_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1672,7 +1672,7 @@ GameObject:
   - component: {fileID: 1122798860528691005}
   - component: {fileID: 6328426428826697807}
   m_Layer: 6
-  m_Name: "Mex..188_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 462103873093913521}
   - component: {fileID: 4208284384978496952}
   m_Layer: 6
-  m_Name: "Mex..081_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1838,7 @@ GameObject:
   - component: {fileID: 5168508819250667945}
   - component: {fileID: 5268475865443961742}
   m_Layer: 6
-  m_Name: "Mex..160_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1921,7 +1921,7 @@ GameObject:
   - component: {fileID: 5231388315563178348}
   - component: {fileID: 1835264992874853852}
   m_Layer: 6
-  m_Name: "Mex..185_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 7050779922170506273}
   - component: {fileID: 8415454802054482432}
   m_Layer: 6
-  m_Name: "Mex..096_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2087,7 +2087,7 @@ GameObject:
   - component: {fileID: 79901819586540704}
   - component: {fileID: 3411588168620667183}
   m_Layer: 6
-  m_Name: "Mex..025_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2170,7 +2170,7 @@ GameObject:
   - component: {fileID: 3328004816886801681}
   - component: {fileID: 7269591596185088078}
   m_Layer: 6
-  m_Name: "Mex123456_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 5896340565825193170}
   - component: {fileID: 4389877421224641544}
   m_Layer: 6
-  m_Name: "Mex..183_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 3936491711528288288}
   - component: {fileID: 4734355841899545717}
   m_Layer: 6
-  m_Name: "Mex..094_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2419,7 +2419,7 @@ GameObject:
   - component: {fileID: 7427454273825787051}
   - component: {fileID: 2057125623171813846}
   m_Layer: 6
-  m_Name: "Mex777_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2502,7 +2502,7 @@ GameObject:
   - component: {fileID: 5646578867261997130}
   - component: {fileID: 1009793850383571820}
   m_Layer: 6
-  m_Name: "Mex..016_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,7 +2585,7 @@ GameObject:
   - component: {fileID: 3323968503253553408}
   - component: {fileID: 42687889487293356}
   m_Layer: 6
-  m_Name: "Mex..176_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2668,7 +2668,7 @@ GameObject:
   - component: {fileID: 8993900072188712946}
   - component: {fileID: 3585757472647902614}
   m_Layer: 6
-  m_Name: "Mex..175_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2751,7 +2751,7 @@ GameObject:
   - component: {fileID: 2147844854938474143}
   - component: {fileID: 6428579562192327059}
   m_Layer: 6
-  m_Name: "Mex..020_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2834,7 +2834,7 @@ GameObject:
   - component: {fileID: 3977307672724047839}
   - component: {fileID: 6411443739979055215}
   m_Layer: 6
-  m_Name: "Mex..065_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2917,7 +2917,7 @@ GameObject:
   - component: {fileID: 6477971772386702747}
   - component: {fileID: 428528670570657083}
   m_Layer: 6
-  m_Name: "Mex..169_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.004"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3000,7 +3000,7 @@ GameObject:
   - component: {fileID: 1201519863899382351}
   - component: {fileID: 4024081908702376531}
   m_Layer: 6
-  m_Name: "Mex..187_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3232,7 +3232,7 @@ GameObject:
   - component: {fileID: 5696246395857428642}
   - component: {fileID: 2549889777894615763}
   m_Layer: 6
-  m_Name: "Mex..151_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3315,7 +3315,7 @@ GameObject:
   - component: {fileID: 9051017701198347457}
   - component: {fileID: 84147827975407545}
   m_Layer: 6
-  m_Name: "Mex..148_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3398,7 +3398,7 @@ GameObject:
   - component: {fileID: 5967191713120915390}
   - component: {fileID: 2764474889979356227}
   m_Layer: 6
-  m_Name: "Mex..166_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.004"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3481,7 +3481,7 @@ GameObject:
   - component: {fileID: 2511756484156587359}
   - component: {fileID: 7561373028311411758}
   m_Layer: 6
-  m_Name: "Mex..082_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3564,7 +3564,7 @@ GameObject:
   - component: {fileID: 1295798029522664905}
   - component: {fileID: 8136267158911655487}
   m_Layer: 6
-  m_Name: "Mex..161_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3787,10 +3787,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de665954815855547989738602f9b9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDrunk: 0
   chanceOfRandomDrunk: 0.01
   timeDrunk: 10
   model: {fileID: 2730545649705800514}
+  isDrunk: 0
 --- !u!54 &698751244421706833
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3843,7 +3843,7 @@ GameObject:
   - component: {fileID: 7847043923111903084}
   - component: {fileID: 7234273458236091443}
   m_Layer: 6
-  m_Name: "Mex._low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3926,7 +3926,7 @@ GameObject:
   - component: {fileID: 596604667333787369}
   - component: {fileID: 5344181697223395135}
   m_Layer: 6
-  m_Name: "Mex..178_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4009,7 +4009,7 @@ GameObject:
   - component: {fileID: 8038323189557294709}
   - component: {fileID: 3741222014267936744}
   m_Layer: 6
-  m_Name: "Mex..095_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4092,7 +4092,7 @@ GameObject:
   - component: {fileID: 566513391889080795}
   - component: {fileID: 5395268049109844271}
   m_Layer: 6
-  m_Name: "Mex..077_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4175,7 +4175,7 @@ GameObject:
   - component: {fileID: 1875279956605579989}
   - component: {fileID: 5536970509216579695}
   m_Layer: 6
-  m_Name: "Mex..024_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4258,7 +4258,7 @@ GameObject:
   - component: {fileID: 8599438504231026407}
   - component: {fileID: 7746009721347498532}
   m_Layer: 6
-  m_Name: "Mex..167_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.004"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4341,7 +4341,7 @@ GameObject:
   - component: {fileID: 6408238769694543542}
   - component: {fileID: 7866959804933938038}
   m_Layer: 6
-  m_Name: "Mex..149_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.001"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4424,7 +4424,7 @@ GameObject:
   - component: {fileID: 3143246164404317966}
   - component: {fileID: 3413296584986459827}
   m_Layer: 6
-  m_Name: "Mex..092_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4507,7 +4507,7 @@ GameObject:
   - component: {fileID: 8846889288204765882}
   - component: {fileID: 3261772209355919417}
   m_Layer: 6
-  m_Name: "Mex..150_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4590,7 +4590,7 @@ GameObject:
   - component: {fileID: 2677740457083742824}
   - component: {fileID: 7154246284147836644}
   m_Layer: 6
-  m_Name: "Mex..074_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.004"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4673,7 +4673,7 @@ GameObject:
   - component: {fileID: 1890754507953176827}
   - component: {fileID: 8139868462673177752}
   m_Layer: 6
-  m_Name: "Mex..021_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4756,7 +4756,7 @@ GameObject:
   - component: {fileID: 2188568528531791305}
   - component: {fileID: 4064978887766754513}
   m_Layer: 6
-  m_Name: "Mex..079_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4839,7 +4839,7 @@ GameObject:
   - component: {fileID: 2576872168835933475}
   - component: {fileID: 8497240244173081829}
   m_Layer: 6
-  m_Name: "Mex..069_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4922,7 +4922,7 @@ GameObject:
   - component: {fileID: 7882219516372087228}
   - component: {fileID: 2595679681752545601}
   m_Layer: 6
-  m_Name: "Mex..085_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5005,7 +5005,7 @@ GameObject:
   - component: {fileID: 8909571742330572034}
   - component: {fileID: 5636576227148397825}
   m_Layer: 6
-  m_Name: "Mex555_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.001"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 6143220942170786803}
   - component: {fileID: 1756155563626033319}
   m_Layer: 6
-  m_Name: "Mex..172_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5171,7 +5171,7 @@ GameObject:
   - component: {fileID: 2039080086532280421}
   - component: {fileID: 9068683748476672448}
   m_Layer: 6
-  m_Name: "Mex..119_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5254,7 +5254,7 @@ GameObject:
   - component: {fileID: 4198313189857166828}
   - component: {fileID: 3413927333602212203}
   m_Layer: 6
-  m_Name: "Mex..171_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5337,7 +5337,7 @@ GameObject:
   - component: {fileID: 8757273017649624844}
   - component: {fileID: 8830293983459398312}
   m_Layer: 6
-  m_Name: "Mex..075_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5420,7 +5420,7 @@ GameObject:
   - component: {fileID: 5375961538454222247}
   - component: {fileID: 4482759287586675307}
   m_Layer: 6
-  m_Name: "Mex..070_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5503,7 +5503,7 @@ GameObject:
   - component: {fileID: 3992451677600587445}
   - component: {fileID: 2406459169856235594}
   m_Layer: 6
-  m_Name: "Mex..173_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5586,7 +5586,7 @@ GameObject:
   - component: {fileID: 4248002442677792117}
   - component: {fileID: 4738651285307117258}
   m_Layer: 6
-  m_Name: "Mex..067_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5669,7 +5669,7 @@ GameObject:
   - component: {fileID: 1321663170201140493}
   - component: {fileID: 5120300837124620876}
   m_Layer: 6
-  m_Name: "Mex..168_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.004"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5752,7 +5752,7 @@ GameObject:
   - component: {fileID: 1793172479368224372}
   - component: {fileID: 5404592937597454223}
   m_Layer: 6
-  m_Name: "Mex..091_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5835,7 +5835,7 @@ GameObject:
   - component: {fileID: 4684711380180647881}
   - component: {fileID: 3684137224283148499}
   m_Layer: 6
-  m_Name: "Mex..090_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5918,7 +5918,7 @@ GameObject:
   - component: {fileID: 8505013687886471577}
   - component: {fileID: 3263382460410632940}
   m_Layer: 6
-  m_Name: "Mex..083_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6001,7 +6001,7 @@ GameObject:
   - component: {fileID: 6425018486366056846}
   - component: {fileID: 6762373999200535690}
   m_Layer: 6
-  m_Name: "Mex..068_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6084,7 +6084,7 @@ GameObject:
   - component: {fileID: 8372940381399620398}
   - component: {fileID: 4985222568595481079}
   m_Layer: 6
-  m_Name: "Mex..179_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6167,7 +6167,7 @@ GameObject:
   - component: {fileID: 1061176321853728887}
   - component: {fileID: 2704154310152454666}
   m_Layer: 6
-  m_Name: "Mex..076_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6250,7 +6250,7 @@ GameObject:
   - component: {fileID: 4239230329513132022}
   - component: {fileID: 4507702046097386218}
   m_Layer: 6
-  m_Name: "Mex..078_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6333,7 +6333,7 @@ GameObject:
   - component: {fileID: 1872881018968038527}
   - component: {fileID: 6664915562626867807}
   m_Layer: 6
-  m_Name: "Mex..018_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6416,7 +6416,7 @@ GameObject:
   - component: {fileID: 7226212800939383778}
   - component: {fileID: 8362815469655145337}
   m_Layer: 6
-  m_Name: "Mex..037_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.002"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6499,7 +6499,7 @@ GameObject:
   - component: {fileID: 2556237516134212316}
   - component: {fileID: 6334464759475887529}
   m_Layer: 6
-  m_Name: "Mex..177_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6582,7 +6582,7 @@ GameObject:
   - component: {fileID: 244893170721452389}
   - component: {fileID: 1737887079700737847}
   m_Layer: 6
-  m_Name: "Mex..026_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6665,7 +6665,7 @@ GameObject:
   - component: {fileID: 7817381001426746553}
   - component: {fileID: 4611279858541211939}
   m_Layer: 6
-  m_Name: "Mex..086_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6748,7 +6748,7 @@ GameObject:
   - component: {fileID: 6392447630167254472}
   - component: {fileID: 3161460090390471770}
   m_Layer: 6
-  m_Name: "Mex..084_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6831,7 +6831,7 @@ GameObject:
   - component: {fileID: 4285486020603901060}
   - component: {fileID: 8644368121329820374}
   m_Layer: 6
-  m_Name: "Mex444_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.001"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6914,7 +6914,7 @@ GameObject:
   - component: {fileID: 3478679855596043931}
   - component: {fileID: 3608819651894844086}
   m_Layer: 6
-  m_Name: "Mex..089_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6997,7 +6997,7 @@ GameObject:
   - component: {fileID: 5540910460277405901}
   - component: {fileID: 4806551772372210359}
   m_Layer: 6
-  m_Name: "Mex..154_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.003"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7080,7 +7080,7 @@ GameObject:
   - component: {fileID: 2790749975524031587}
   - component: {fileID: 1383365802962750288}
   m_Layer: 6
-  m_Name: "Mex..184_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7163,7 +7163,7 @@ GameObject:
   - component: {fileID: 9213512507202989839}
   - component: {fileID: 5826206042254561324}
   m_Layer: 6
-  m_Name: "Mex..088_low_\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B"
+  m_Name: part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
