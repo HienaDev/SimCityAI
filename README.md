@@ -66,19 +66,19 @@ O *Game Manager* é o objeto que controla o estado, antes e durante, da simulaç
   - ***:pedestriansSpawnPoints***: possíveis pontos de *spawn* e destino dos peões,
   - ***:maxDestinyTimePedestrians***: intervalo máximo de tempo para um peão ser gerado ou estar parado num destino,
 
-[PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DOS PEÕES]
+![Parâmetros dos peões](./Images/GameManagerPedestrians.png)
 
 - Caos (*Chaos*)
   - ***chaosChance***: probabilidade de um agente começar a comportar-se de forma errática,
   - ***maxChaosTime***: intervalo máximo de tempo máximo para um agente estar em estado de caos,
   - ***blinkSpeed***: velocidade do efeito de piscar de um agente em estado de caos,
 
-[PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DE CAOS]
+![Parâmetros de caos](./Images/GameManagerChaos.png)
 
 - Acidente (*Accident*)
   - ***maxAccidentTime***: intervalo máximo de tempo para um agente estar em estado de acidente,
 
-[PLACEHOLDER PARA IMAGEM DOS PARÂMETROS DE ACIDENTE]
+![Parâmetros de acidente](./Images/GameManagerAccident.png)
 
 ## Resultados e discussão
 
