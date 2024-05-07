@@ -20,6 +20,7 @@
   - *Game Manager*
     - Definições dos peões
     - Definições de *chaos*
+    - Definições de acidente
   - Relatório
     - Introdução
     - Estado da Arte
@@ -113,8 +114,8 @@ O *Game Manager* é o objeto que controla o estado, antes e durante, da simulaç
 
 - Peões (*Pedestrians*)
   - ***numberOfPedestrians***: número máximo de peões a serem gerados no inicio da simulação,
-  - ***:pedestriansSpawnPoints***: possíveis pontos de *spawn* e destino dos peões,
-  - ***:maxDestinyTimePedestrians***: intervalo máximo de tempo para um peão ser gerado ou estar parado num destino,
+  - ***pedestriansSpawnPoints***: possíveis pontos de *spawn* e destino dos peões,
+  - ***maxDestinyTimePedestrians***: intervalo máximo de tempo para um peão ser gerado ou estar parado num destino,
 
 ![Parâmetros dos peões](./Images/GameManagerPedestrians.png)
 
@@ -139,6 +140,14 @@ A simulação que realizámos demonstrou comportamentos alinhados com as expecta
 Inesperadamente, observámos comportamentos emergentes não explicitamente programados, como os peões a desviarem-se autonomamente uns dos outros, e os veículos com tendência de se desviar dos peões antes de efetivamente parar para eles atravessarem nas passadeiras. Este comportamento emergente, é resultado do sistema de *pathfinding* baseado em *navmesh*, sugere que o modelo pode efetivamente processar e adaptar-se a complexidades não antecipadas do ambiente simulado, garantindo uma navegação mais realista e fluida.
 
 Quanto ao modo 'caos', os veículos e peões consistentemente ignoraram as regras de trânsito, os veículos ignorando sinais stop e semáforos, e os peões atravessando a estrada sem respeitar as passadeiras. Este comportamento imprevisível resultou em acidentes frequentes, enquanto o modo estava ativo, mesmo que com baixa probabilidade deste ser ativo, com veículos a colidirem uns com os outros e com peões, e peões a serem atropelados por veículos. Este cenário de caos controlado permitiu-nos testar a resiliência da simulação e avaliar a capacidade dos agentes de lidar com situações de tráfego extremas.
+
+### Discussão
+
+A análise dos resultados da simulação demonstra uma relação direta entre as configurações definidas no GameManager e o comportamento dos agentes. As *behavior trees* e o *pathfinding* mostraram-se eficazes, com os agentes a cumprir as regras de trânsito em condições normais e a exibir comportamentos emergentes, como os peões a desviarem-se uns dos outros e os veículos a reduzirem a velocidade antes de parar nas passadeiras. Estes comportamentos emergentes confirmam que o sistema de *pathfinding* baseado em navmesh está a adaptar efetivamente as trajetórias para evitar colisões, garantindo uma movimentação realista e segura dos agentes.
+
+O modo 'caos' revelou-se uma ferramenta valiosa para testar a resiliência da simulação e avaliar a capacidade dos agentes de lidar com situações extremas de tráfego. Os acidentes frequentes observados durante o modo 'caos' destacam a importância de considerar cenários de tráfego imprevisíveis e caóticos na modelação de ambientes urbanos, e a necessidade de implementar estratégias de segurança e prevenção de acidentes para proteger os agentes e garantir a segurança do tráfego.
+
+Os comportamentos inesperados, como a evasão autónoma, reforçam a importância de ajustes contínuos nas behavior trees e nas configurações de pathfinding, com o objetivo de melhorar o realismo e a resposta dos agentes nas simulações.
 
 ## Conclusões
 
