@@ -136,6 +136,22 @@ Quando está verde, desliga esse colisor.
 
 ![Colisor semáforo](https://media.discordapp.net/attachments/1150098070407757825/1237460318758764585/image.png?ex=663bba3a&is=663a68ba&hm=186433dd45d88bb2429008441306be83af369c6e0de54888bf1a87cf28ae9cac&=&format=webp&quality=lossless)
 
+### Sinal Stop
+
+Os sinais de stop são agentes fixos do ambiente. Têm um colider ao lado deles que é verificado pelo carro.
+O carro ao verificar esta colisão, guarda que já colidiu com este sinal de stop, e não volta a parar em sinais de stop, assim que passa pelo collider do sinal de stop e sai, volta a colidir com sinais de stop.
+
+![Colisor sinal stop](https://media.discordapp.net/attachments/1150098070407757825/1237460071525519470/image.png?ex=663bb9ff&is=663a687f&hm=1a613802dd9801dce86bf2382649503d7c8aa979971e007c9f66226052c44171&=&format=webp&quality=lossless&width=1026&height=676)
+
+### Estradas
+
+As estradas em que os carros andam são separadas por peças. Estas peças são compostas por planos pretos para o chão, NavMeshLinks e um colisor para divir as faixas.
+Os NavMeshLink são colocados nas pontas das peças para unir as peças das estradas e garantir uma circulação de uma só direção, estão representados por vermelhor e verde.
+Os colisores das faixas garantem que os carros andam apenas num faixa, permitindo haver duas faixas na mesma peça com direções opostas, este colisores são transparentes.
+
+![Composição de uma peça de estrada](https://media.discordapp.net/attachments/1150098070407757825/1237459884312756338/image.png?ex=663bb9d3&is=663a6853&hm=a12d8db01f30aabfffc82bcde6d37a3ae71266f1e15c750974b4d231626660b7&=&format=webp&quality=lossless&width=1423&height=676)
+![Navmesh depois do colisor para as faixas](https://media.discordapp.net/attachments/1150098070407757825/1237460485608313006/image.png?ex=663bba62&is=663a68e2&hm=53d408050648230449de196fddc8316c4b29d82b0982390e730a91c1b8e99d68&=&format=webp&quality=lossless&width=1345&height=676)
+
 
 ### *Game Manager*
 
@@ -194,3 +210,4 @@ Esta simulação está alinhada com a pesquisa que realizámos sobre a aplicaç�
 - [4] Weißmann, M., Edler, D., Keil, J., & Dickmann, F. (2023, May 13). Creating an interactive urban traffic system for the simulation of different traffic scenarios. MDPI. https://www.mdpi.com/2076-3417/13/10/6020 
 - [5] Nezami, F. N., Wächter, M. A., Pipa, G., & König, P. (2020, January 9). Project westdrive: Unity City with self-driving cars and pedestrians for virtual reality studies. Frontiers. https://www.frontiersin.org/articles/10.3389/fict.2020.00001/full 
 - [6] Yuloskov, A., Bahrami, M., Mazzara, M., & Kotorov, I. (2022, June). Traffic light algorithms in Smart Cities: Simulation and analysis. ResearchGate. https://www.researchgate.net/publication/361845379_Traffic_Light_Algorithms_in_Smart_Cities_Simulation_and_Analysis 
+- [7] Unity. NavMeshAgent.CompleteOffMeshLink. Docs Unity 3D. https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.CompleteOffMeshLink.html

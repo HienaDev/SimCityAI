@@ -246,7 +246,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 62a4c48392315ab439e21a03580a58c5
-  position: {x: 1996.9482, y: 493.99997}
+  position: {x: 2121.9993, y: 493.99994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f3850a3c02b5d8e4f81518aa497a1e6b
-  position: {x: 646.00006, y: 518}
+  position: {x: 658, y: 514}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 17e8b23b09bbc1e4e9d4ce9111b95fe6
-  position: {x: 546.9998, y: 756.99994}
+  position: {x: 507.99997, y: 756.9999}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     time: 0
