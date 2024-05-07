@@ -168,14 +168,14 @@ Os carros quando estão em acidente têm um comportamento muito parecido ao de q
 
 O colisor quadrado na parte da frente de cada carro é o detetor de peões, os peões como são mais pequenos que os carros, por vezes andavam entre os *RayCast's* dos carros e o carro atropelava-os. A solução foi usar um collider que enquanto tiver peões não avança.
 
-O carro roxo tem uma velocidade baixa de 4.
-![Carro roxo](./Images/PurpleCar.png)
+O carro *miner* tem uma velocidade baixa de 4.
+![Carro miner](./Images/PurpleCar.png)
 
-O carro cinzento tem uma velocidade média de 6.
-![Carro cinzento](./Images/BlueCar.png)
+O carro *carrier* tem uma velocidade média de 6.
+![Carro carrier](./Images/BlueCar.png)
 
-O carro rosa tem uma velocidade alta de 8.
-![Carro rosa](./Images/PinkCar.png)
+O carro *speedster* tem uma velocidade alta de 8.
+![Carro speedster](./Images/PinkCar.png)
 
 ### Destinos
 
