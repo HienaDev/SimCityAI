@@ -15,7 +15,9 @@ public class IsCarDrunk : MonoBehaviour
     private List<MeshRenderer> renderers;
 
     
-
+    /// <summary>
+    /// Get the mesh from all objects of the car
+    /// </summary>
     private void Start()
     {
         wfs = new WaitForSeconds(timeDrunk);
@@ -52,26 +54,21 @@ public class IsCarDrunk : MonoBehaviour
 
     private IEnumerator GetDrunk()
     {
-        foreach(MeshRenderer renderer in renderers)
-        {
-            renderer.material.color = Color.red;
-        }
-
+        TurnRed();
         isDrunk = true;
 
         yield return wfs;
 
-        foreach (MeshRenderer renderer in renderers)
-        {
-            renderer.material.color = Color.white;
-        }
+        TurnWhite();
 
         isDrunk = false;
 
     }
 
 
-
+    /// <summary>
+    /// turn the car green on accidents
+    /// </summary>
     public void TurnGreen()
     {
         foreach (MeshRenderer renderer in renderers)
@@ -80,6 +77,9 @@ public class IsCarDrunk : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// turn the car back to default
+    /// </summary>
     public void TurnWhite()
     {
         foreach (MeshRenderer renderer in renderers)
@@ -88,6 +88,20 @@ public class IsCarDrunk : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// turn the car red when drunk
+    /// </summary>
+    public void TurnRed()
+    {
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.material.color = Color.red;
+        }
+    }
+
+    /// <summary>
+    /// deactive mesh when getting to destination
+    /// </summary>
     public void DeactivateMesh()
     {
         foreach (MeshRenderer renderer in renderers)
