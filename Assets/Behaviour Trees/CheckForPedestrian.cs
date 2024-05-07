@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class AccidentCheck : ActionNode
+public class CheckForPedestrian : ActionNode
 {
     protected override void OnStart() {
     }
@@ -12,14 +12,9 @@ public class AccidentCheck : ActionNode
     }
 
     protected override State OnUpdate() {
-
-        if(context.cfa.Accident)
-        { 
-            context.icd.TurnGreen();
+       
+        if( context.cfpc.PedestrianCollision)
             return State.Success;
-        }
-        if(!context.icd.isDrunk)
-            context.icd.TurnWhite();
 
         return State.Failure;
     }

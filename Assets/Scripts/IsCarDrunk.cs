@@ -66,4 +66,21 @@ public class IsCarDrunk : MonoBehaviour
         isDrunk = false;
 
     }
+
+    public void TurnGreen()
+    {
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.material.color = Color.green;
+        }
+    }
+
+    public void TurnWhite()
+    {
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.material.color = Color.white;
+        }
+    }
 }
+

@@ -25,7 +25,8 @@ public class CheckForCollision : ActionNode
             { 
                 if (context.drd.collision)
                 {
-                    Debug.Log(context.drd.collisionObject.name);
+
+                    Debug.Log(context.gameObject.name + " collided with " + context.drd.collisionObject.name);
 
                     return State.Success;
                 }

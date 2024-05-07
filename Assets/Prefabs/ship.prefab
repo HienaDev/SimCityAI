@@ -3080,7 +3080,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2730545649705800514}
-  m_Layer: 6
+  - component: {fileID: 188311827491632009}
+  m_Layer: 2
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,6 +3186,18 @@ Transform:
   - {fileID: 8872334862517437251}
   m_Father: {fileID: 530298560122353140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &188311827491632009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418741231873256976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d41111411f480345bc0ccdf49fbf07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4458265958881464031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3616,13 +3629,11 @@ GameObject:
   - component: {fileID: 4085756706782969836}
   - component: {fileID: 8092329537517293185}
   - component: {fileID: 5024064106292052075}
-  - component: {fileID: 9036447838398291339}
-  - component: {fileID: 6946332148763366292}
   - component: {fileID: 698751244421706833}
   - component: {fileID: 7887101313137387314}
   m_Layer: 6
   m_Name: ship
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3657,9 +3668,9 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 1.2387612e+21
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
@@ -3703,7 +3714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88befc8a2968e834898121fd50fbc9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 5
+  distance: 7
   collision: 0
   collisionObject: {fileID: 0}
 --- !u!114 &4085756706782969836
@@ -3758,39 +3769,6 @@ MonoBehaviour:
   chanceOfRandomDrunk: 0.01
   timeDrunk: 10
   model: {fileID: 2730545649705800514}
---- !u!114 &9036447838398291339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5080148552923016667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4fe2d72e78e654abb22f2f871d31f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &6946332148763366292
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5080148552923016667}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.06, y: 2.66, z: 2.6}
-  m_Center: {x: 0, y: 1.2, z: 4.31}
 --- !u!54 &698751244421706833
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3799,7 +3777,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5080148552923016667}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1e+9
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3816,7 +3794,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &7887101313137387314
 MonoBehaviour:

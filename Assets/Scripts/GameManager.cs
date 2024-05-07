@@ -24,16 +24,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float maxAccidentTime;
 
     [Header("[CARS]")]
-    [SerializeField] private GameObject[] waypoints;
+    [SerializeField] private GameObject[] carWaypoints;
     private int[] carsToSpawnInEachWaypoint;
-    [SerializeField] private List<IsCarDrunk> carsToGetDrunks;
+    private List<IsCarDrunk> carsToGetDrunks;
     [SerializeField] private float carsToSpawn;
     [SerializeField] private GameObject carPrefab;
     [SerializeField] private float timeForCarToSpawn;
     private WaitForSeconds wfsCar;
     [SerializeField] private Vector2 timeForCarsToMove;
     
-    public GameObject[] CarWaypoints => waypoints;
+    public GameObject[] CarWaypoints => carWaypoints;
 
     private int numberOfActivePedestrians = 0;
 
@@ -67,15 +67,14 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public GameObject[] PedestriansWaypoints => pedestriansSpawnPoints;
 
+    private List<PedestrianController> spawnedPedestrians;
+
     /// <summary>
     /// Start the game manager
     /// </summary>
     private void Awake()
     {
-        for (int i = 0; i < numberOfPedestrians; i++)
-        {
-            StartCoroutine(SpawnPedestrianAtRandomTime());
-        }
+       
 
         Instance = this;
 
@@ -84,13 +83,27 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        carsToSpawnInEachWaypoint = new int[waypoints.Length];
+        //StartSimulation();
+    }
+
+
+    public void StartSimulation()
+    {
 
         carsToGetDrunks = new List<IsCarDrunk>();
 
+        spawnedPedestrians = new List<PedestrianController>();
+
+        carsToSpawnInEachWaypoint = new int[carWaypoints.Length];
+
+        for (int i = 0; i < numberOfPedestrians; i++)
+        {
+            StartCoroutine(SpawnPedestrianAtRandomTime());
+        }
+
         for (int i = 0; i < carsToSpawn; i++)
         {
-            int waypointToSpawn = UnityEngine.Random.Range(0, waypoints.Length);
+            int waypointToSpawn = UnityEngine.Random.Range(0, carWaypoints.Length);
             carsToSpawnInEachWaypoint[waypointToSpawn]++;
 
         }
@@ -98,7 +111,7 @@ public class GameManager : MonoBehaviour
         wfsCar = new WaitForSeconds(timeForCarToSpawn);
 
 
-        for (int i = 0; i < waypoints.Length; i++)
+        for (int i = 0; i < carWaypoints.Length; i++)
         {
             StartCoroutine(SpawnCarsAtWaypoints(i));
 
@@ -106,7 +119,6 @@ public class GameManager : MonoBehaviour
 
         //RandomCarDrunk();
     }
-
 
 
     public void RandomCarDrunk()
@@ -123,12 +135,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RandomPedestrianDrunk()
+    {
+        bool alreadyDrunk = false;
+        System.Random r = new System.Random();
+        foreach (int i in Enumerable.Range(0, spawnedPedestrians.Count).OrderBy(x => r.Next()))
+        {
+            if (!alreadyDrunk && !spawnedPedestrians[i].IsDrunk)
+            {
+                spawnedPedestrians[i].SetDrunkState(true);
+                alreadyDrunk = true;
+            }
+        }
+    }
+
     private IEnumerator SpawnCarsAtWaypoints(int n)
     {
         while (carsToSpawnInEachWaypoint[n] > 0)
         {
             carsToSpawnInEachWaypoint[n]--;
-            GameObject car =  Instantiate(carPrefab, waypoints[n].transform.position, Quaternion.identity, transform);
+            GameObject car =  Instantiate(carPrefab, carWaypoints[n].transform.position, Quaternion.identity, transform);
             carsToGetDrunks.Add(car.GetComponent<IsCarDrunk>());
             yield return wfsCar;
         }
@@ -145,8 +171,9 @@ public class GameManager : MonoBehaviour
 
         int spawnPointIndex = UnityEngine.Random.Range(0, pedestriansSpawnPoints.Length);
         GameObject spawnPoint = pedestriansSpawnPoints[spawnPointIndex];
-        Instantiate(pedestrianPrefab, spawnPoint.transform.position, Quaternion.identity);
+        GameObject pedestrian = Instantiate(pedestrianPrefab, spawnPoint.transform.position, Quaternion.identity);
         numberOfActivePedestrians++;
+        spawnedPedestrians.Add(pedestrian.GetComponent<PedestrianController>());
     }
 
     /// <summary>
