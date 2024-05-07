@@ -93,7 +93,9 @@ public class GameManager : MonoBehaviour
         //StartSimulation();
     }
 
-
+    /// <summary>
+    /// Start spawning pedestrians and cars
+    /// </summary>
     public void StartSimulation()
     {
 
@@ -124,9 +126,11 @@ public class GameManager : MonoBehaviour
 
         }
 
-        //RandomCarDrunk();
     }
 
+    /// <summary>
+    /// Remove all cars and pedestrians
+    /// </summary>
     public void ResetSimulation()
     {
         foreach(var car in carsToGetDrunks)
@@ -149,10 +153,12 @@ public class GameManager : MonoBehaviour
         numberOfActiveCars = 0;
 
         pedestriansText.text = $"Number of pedestrians: {numberOfActivePedestrians}";
-        carsText.text = $"Number of pedestrians: {numberOfActiveCars}";
+        carsText.text = $"Number of cars: {numberOfActiveCars}";
     }
 
-
+    /// <summary>
+    /// Get a random car drunk
+    /// </summary>
     public void RandomCarDrunk()
     {
         bool alreadyDrunk = false;
@@ -167,6 +173,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Get a random pedestrian drunk
+    /// </summary>
     public void RandomPedestrianDrunk()
     {
         bool alreadyDrunk = false;
@@ -181,6 +190,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawn cars at random locations
+    /// </summary>
+    /// <param name="n"></param>
+    /// <returns></returns>
     private IEnumerator SpawnCarsAtWaypoints(int n)
     {
         while (numberOfCarsInEachWaypoint[n] > 0)
@@ -245,7 +259,7 @@ public class GameManager : MonoBehaviour
     public void RemoveCar()
     {
         numberOfActiveCars--;
-        carsText.text = $"Number of pedestrians: {numberOfActiveCars}";
+        carsText.text = $"Number of cars: {numberOfActiveCars}";
     }
 
     /// <summary>
