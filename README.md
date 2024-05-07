@@ -114,7 +114,7 @@ Os carros são gerados aleatoriamente no inicio da simulação, sendo possível 
 
 ![Árvore de comportamento dos carros](https://media.discordapp.net/attachments/1150098070407757825/1237456460699533476/image.png?ex=663bb6a3&is=663a6523&hm=d206a4f0340d1bf7dabb6c340e0ea9cfd4ec2cd67f344e0a4203801a1eb67737&=&format=webp&quality=lossless&width=1224&height=676)
 
-Os carros em estado normal têm um destino aleatório e tentam chegar até ele, cada prefab de carro tem uma velocidade diferente, respeitando as regras de trânsito, verificam se há pedestres no caminho, se têm um sinal de stop à frente ou um semáforo. Nesses casos o carro trava e fica parado uns segundo no node *Wait*. Quando chegam ao seu destino, recebem um novo destino, desaparecem uns segundos e voltam a aparecer.
+Os carros em estado normal têm um destino aleatório e tentam chegar até ele, cada prefab de carro tem uma velocidade diferente, respeitando as regras de trânsito, verificam se há pedestres no caminho, se têm um sinal de stop à frente ou um semáforo. Estas verificações são feita com *RayCast's*. Nesses casos o carro trava e fica parado uns segundo no node *Wait*. Quando chegam ao seu destino, recebem um novo destino, desaparecem uns segundos e voltam a aparecer.
 
 ![Sequência de comportamento normal dos carros](https://media.discordapp.net/attachments/1150098070407757825/1237462610342051923/image.png?ex=663bbc5d&is=663a6add&hm=ba77251a9204dc8fd3507182ece92fba6ec22e73a7e1ed26157e127a7d446797&=&format=webp&quality=lossless)
 ![Sequência de verificação de colisões](https://media.discordapp.net/attachments/1150098070407757825/1237462695461257286/image.png?ex=663bbc71&is=663a6af1&hm=912cec070be6450e8b4fdac9e63af41a2000a6ffa5c77657858f6ac4db139c06&=&format=webp&quality=lossless)
@@ -127,6 +127,19 @@ Este node retorna sucesso se o carro estiver bêbado, passando a frente as verif
 Os carros quando estão em acidente têm um comportamento muito parecido ao de quando estão bêbados, mas para além de passar as verificações a frente, também reduz a velocidade deles para 0.
 
 ![Sequência de comportamento em acidente dos carros](https://media.discordapp.net/attachments/1150098070407757825/1237464735331385527/image.png?ex=663bbe57&is=663a6cd7&hm=46c83b2f3c9ff365350c0ba70e46c1ba2d930735942c56f5fe648a6c83af1070&=&format=webp&quality=lossless)
+
+#### Tipos de carros
+
+O colisor quadrado na parte da frente de cada carro é o detetor de peões, os peões como são mais pequenos que os carros, por vezes andavam entre os *RayCast's* dos carros e o carro atropelava-os. A solução foi usar um collider que enquanto tiver peões não avança.
+
+O carro roxo tem uma velocidade baixa de 4.
+![Carro roxo](https://media.discordapp.net/attachments/1150098070407757825/1237469088406573126/image.png?ex=663bc265&is=663a70e5&hm=93bf2d2ae12b90632349cbffad4d10b44c89a3415f38f6263cb40670316f0bd1&=&format=webp&quality=lossless&width=550&height=264)
+
+O carro azul tem uma velocidade média de 6.
+![Carro azul](https://media.discordapp.net/attachments/1150098070407757825/1237469129196179486/image.png?ex=663bc26f&is=663a70ef&hm=0da8a0f8b030cfcbf8227256b344f5bd25be8c476f5a04a2726c78bda8b7b0ee&=&format=webp&quality=lossless&width=550&height=279)
+
+O carro rosa tem uma velocidade alta de 8.
+![Carro rosa](https://media.discordapp.net/attachments/1150098070407757825/1237469170061545482/image.png?ex=663bc279&is=663a70f9&hm=4b2618f2e37732c8a92ea34ed7c39e6d8573c641b69ac431781b39f4cfe332d3&=&format=webp&quality=lossless&width=550&height=296)
 
 ### Semáforos
 
