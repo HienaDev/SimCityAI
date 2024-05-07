@@ -22,6 +22,11 @@
     - Definições de *chaos*
   - Relatório
     - Introdução
+    - Estado da Arte
+    - Metodologia
+      - Peões
+      - *Game Manager*
+    - Resultados e discussão
   - *Context*
     - Efeito de piscar (*Blink effect*)
 
@@ -126,6 +131,14 @@ O *Game Manager* é o objeto que controla o estado, antes e durante, da simulaç
 ![Parâmetros de acidente](./Images/GameManagerAccident.png)
 
 ## Resultados e discussão
+
+### Resultados
+
+A simulação que realizámos demonstrou comportamentos alinhados com as expectativas programadas e revelou algumas dinâmicas emergentes interessantes. Como esperado, os veículos e peões cumpriram as regras de trânsito, com veículos a parar em semáforos, sinais stop e passadeiras quando há peões a atravessar, e peões a utilizarem os passeios e passadeiras destinadas para eles. Esta fidelidade nas ações dos agentes valida o uso das *behavior trees* e *pathfinding* na modelação do comportamento dos agentes.
+
+Inesperadamente, observámos comportamentos emergentes não explicitamente programados, como os peões a desviarem-se autonomamente uns dos outros, e os veículos com tendência de se desviar dos peões antes de efetivamente parar para eles atravessarem nas passadeiras. Este comportamento emergente, é resultado do sistema de *pathfinding* baseado em *navmesh*, sugere que o modelo pode efetivamente processar e adaptar-se a complexidades não antecipadas do ambiente simulado, garantindo uma navegação mais realista e fluida.
+
+Quanto ao modo 'caos', os veículos e peões consistentemente ignoraram as regras de trânsito, os veículos ignorando sinais stop e semáforos, e os peões atravessando a estrada sem respeitar as passadeiras. Este comportamento imprevisível resultou em acidentes frequentes, enquanto o modo estava ativo, mesmo que com baixa probabilidade deste ser ativo, com veículos a colidirem uns com os outros e com peões, e peões a serem atropelados por veículos. Este cenário de caos controlado permitiu-nos testar a resiliência da simulação e avaliar a capacidade dos agentes de lidar com situações de tráfego extremas.
 
 ## Conclusões
 
