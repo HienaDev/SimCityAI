@@ -16,6 +16,10 @@ public class StopSign : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// When a car leaves a stop sign it goes back to having to stop on stop signs, so it only stops once per sign
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log(other.gameObject);

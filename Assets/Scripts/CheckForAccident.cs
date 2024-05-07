@@ -27,6 +27,10 @@ public class CheckForAccident : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// If a car collies with a car or pedestrian it stops moving for some time
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Car") || collision.gameObject.CompareTag("Pedestrian"))
