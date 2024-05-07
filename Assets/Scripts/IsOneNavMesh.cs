@@ -1,63 +1,10 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.AI;
-
-//public class IsOneNavMesh : MonoBehaviour
-//{
-
-//    private NavMeshAgent agent;
-//    private bool gotToNavMesh;
-//    private Vector3 targetPos;
-//    private Vector3 initialPos;
-//    private float lerpValue;
-
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-//        agent = GetComponent<NavMeshAgent>();
-//    }
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        if (agent.isOnOffMeshLink && !gotToNavMesh)
-//        {
-//            gotToNavMesh = true;
-//            targetPos = agent.nextOffMeshLinkData.endPos;
-//            initialPos = transform.position;
-//            lerpValue = 0f;
-//        }
-
-//        if (agent.isOnOffMeshLink && gotToNavMesh)
-//        {
-//            transform.position = Vector3.Lerp(initialPos, targetPos, lerpValue);
-//            lerpValue += 1 / agent.speed * Time.deltaTime;
-//        }
-
-//        if(lerpValue > 1)
-//        {
-//            gotToNavMesh = false;
-//        }
-//    }
-
-//    IEnumerator NormalSpeed(NavMeshAgent agent)
-//    {
-//        OffMeshLinkData data = agent.currentOffMeshLinkData;
-//        Vector3 endPos = data.endPos + Vector3.up * agent.baseOffset;
-//        while (agent.transform.position != endPos)
-//        {
-//            agent.transform.position = Vector3.MoveTowards(agent.transform.position, endPos, agent.speed * Time.deltaTime);
-//            yield return null;
-//        }
-//    }
-//}
-
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
-using TMPro;
 
+/// <summary>
+/// The method to move the agent through the off mesh link
+/// </summary>
 public enum OffMeshLinkMoveMethod
 {
     Teleport,
@@ -66,10 +13,18 @@ public enum OffMeshLinkMoveMethod
 }
 
 [RequireComponent(typeof(NavMeshAgent))]
+
+/// <summary>
+/// Move the agent through the off mesh link
+/// </summary>
 public class AgentLinkMover : MonoBehaviour
 {
-    //wowo
     public OffMeshLinkMoveMethod method = OffMeshLinkMoveMethod.NormalSpeed;
+
+    /// <summary>
+    /// Start the agent
+    /// </summary>
+    /// <returns> Wait for seconds </returns>
     IEnumerator Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -88,6 +43,11 @@ public class AgentLinkMover : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Move the agent at normal speed
+    /// </summary>
+    /// <param name="agent"> The agent </param>
+    /// <returns> Wait for seconds </returns>
     IEnumerator NormalSpeed(NavMeshAgent agent)
     {
         OffMeshLinkData data = agent.currentOffMeshLinkData;
@@ -101,6 +61,13 @@ public class AgentLinkMover : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Move the agent through a parabola
+    /// </summary>
+    /// <param name="agent"> The agent </param>
+    /// <param name="height"> The height of the parabola </param>
+    /// <param name="duration"> The duration of the parabola </param>
+    /// <returns></returns>
     IEnumerator Parabola(NavMeshAgent agent, float height, float duration)
     {
         OffMeshLinkData data = agent.currentOffMeshLinkData;

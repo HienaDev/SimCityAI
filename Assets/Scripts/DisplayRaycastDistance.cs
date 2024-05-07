@@ -1,32 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Display the raycast distance
+/// </summary>
 public class DisplayRaycastDistance : MonoBehaviour
 {
     [SerializeField] private float distance;
-    public bool collision;
+    public bool       collision;
     public GameObject collisionObject;
     
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     private void Start()
     {
         collisionObject = null;
     }
 
     /// <summary>
-    /// We check with a raycast if we are colliding with an object that isn't us
+    /// Update is called once per frame
     /// </summary>
     private void Update()
     {
-
         collision = false;
         collisionObject = null;
 
         RaycastHit hit;
         Debug.DrawRay(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward * distance, Color.red);
-
 
         if (Physics.Raycast(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), gameObject.transform.forward, out hit, distance))
         {
@@ -35,9 +35,6 @@ public class DisplayRaycastDistance : MonoBehaviour
             {
                 collision = true;
             }
-
-
         }
-
     }
 }

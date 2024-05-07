@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Pedestrian controller
+/// </summary>
 public class PedestrianController : MonoBehaviour
 {
     private bool isDrunk;
