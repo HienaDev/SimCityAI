@@ -151,6 +151,12 @@ Os comportamentos inesperados, como a evasão autónoma, reforçam a importânci
 
 ## Conclusões
 
+O desenvolvimento deste projeto permitiu-nos explorar e implementar técnicas de simulação de tráfego urbano, incluindo *behavior trees*, *pathfinding* e cenários de caos controlado. A simulação resultante demonstrou a eficácia dessas técnicas na modelação de comportamentos realistas de veículos e peões, com agentes a cumprir as regras de trânsito, a evitar colisões e a adaptar-se a cenários de tráfego.
+
+Os resultados confirmaram que o modelo é capaz de replicar as regras de trânsito e comportamentos esperados, enquanto revela comportamentos emergentes como a capacidade dos peões de desviar-se autonomamente e dos veículos de ajustar suas trajetórias antes de parar nas passadeiras. No entanto, a simulação também revelou a importância de considerar cenários de tráfego extremos, como o modo 'caos', para testar a resiliência da simulação e avaliar a capacidade dos agentes de lidar com situações imprevisíveis.
+
+Esta simulação está alinhada com a pesquisa que realizámos sobre a aplicação de técnicas de IA na gestão de tráfego urbano, e destaca a importância de considerar cenários de tráfego variados e complexos para garantir a segurança e eficiência do tráfego. O modelo desenvolvido neste projeto pode ser adaptado e expandido para incluir mais agentes, cenários e comportamentos, com o objetivo de criar simulações mais realistas e abrangentes de tráfego urbano.
+
 ## Referências
 
 - [1] TheKiwiCoder. (2021, July 16). Free behaviour Tree editor for Unity. YouTube. https://www.youtube.com/watch?v=SgrG6uAZDHE 
