@@ -171,8 +171,8 @@ O colisor quadrado na parte da frente de cada carro é o detetor de peões, os p
 O carro roxo tem uma velocidade baixa de 4.
 ![Carro roxo](./Images/PurpleCar.png)
 
-O carro azul tem uma velocidade média de 6.
-![Carro azul](./Images/BlueCar.png)
+O carro cinzento tem uma velocidade média de 6.
+![Carro cinzento](./Images/BlueCar.png)
 
 O carro rosa tem uma velocidade alta de 8.
 ![Carro rosa](./Images/PinkCar.png)
