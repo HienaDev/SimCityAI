@@ -19,33 +19,38 @@
     - Sinais de Stop
     - Estradas
     - Destinos
-      - Casa
-      - Jardim
   - *Game Manager*
     - Definições dos carros
     - Gerador de carros
+    - Contador de carros
     - Métodos para UI
   - *UI*
-    - Butões
-  - Câmara
-    - Câmara com movimentação de teclado para a build
+    - Botões
+    - Texto
+  - Câmera
+    - Câmera com movimentação de teclado para a build
   - Relatório
-    - Carros
-    - Estradas
-    - Destinos
-    - Semáforos
-    - Sinais Stop
+    - Metodologia
+      - Carros
+      - Estradas
+      - Destinos
+      - Semáforos
+      - Sinais Stop
 
 - Rafael José:
   - Peões
     - Árvore de comportamento (*Behavior Tree*)
     - Efeito de alcoolismo (*Chaos*)
     - *Pathfinding*
+  - Agentes fixos do ambiente
     - Passadeiras
+    - Passeios
   - *Game Manager*
     - Definições dos peões
     - Definições de *chaos*
     - Definições de acidente
+    - Gerador de peões
+    - Contador de peões
   - Relatório
     - Introdução
     - Estado da Arte
@@ -56,6 +61,7 @@
     - Conclusões
   - *Context*
     - Efeito de piscar (*Blink effect*)
+  - Limpeza e organização do projeto
 
 ## Introdução
 
@@ -146,7 +152,7 @@ Os carros são gerados aleatoriamente no inicio da simulação, sendo possível 
 
 ![Árvore de comportamento dos carros](./Images/CarBehaviorTree.png)
 
-Os carros em estado normal têm um destino aleatório e tentam chegar até ele, cada prefab de carro tem uma velocidade diferente, respeitando as regras de trânsito, verificam se há pedestres no caminho, se têm um sinal de stop à frente ou um semáforo. Estas verificações são feita com *RayCast's*. Nesses casos o carro trava e fica parado uns segundo no node *Wait*. Quando chegam ao seu destino, recebem um novo destino, desaparecem uns segundos e voltam a aparecer.
+Os carros em estado normal têm um destino aleatório e tentam chegar até ele, cada prefab de carro tem uma velocidade diferente, respeitando as regras de trânsito, verificam se há peões no caminho, se têm um sinal de stop à frente ou um semáforo. Estas verificações são feita com *RayCast's*. Nesses casos o carro trava e fica parado uns segundo no node *Wait*. Quando chegam ao seu destino, recebem um novo destino, desaparecem uns segundos e voltam a aparecer.
 
 ![Sequência de comportamento normal dos carros](./Images/CarMovingSequence.png)
 ![Sequência de verificação de colisões](./Images/CollisionCheckSequence.png)
