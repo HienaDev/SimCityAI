@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Stop sign
+/// </summary>
 public class StopSignLogic : MonoBehaviour
 {
     /// <summary>

@@ -5,6 +5,9 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Game manager that controls the simulation
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     [Header("[PEDESTRIANS]")]

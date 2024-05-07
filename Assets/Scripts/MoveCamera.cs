@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using static UnityEngine.Timeline.AnimationPlayableAsset;
 
+/// <summary>
+/// Move the camera
+/// </summary>
 public class MoveCamera : MonoBehaviour
 {
-
     [SerializeField] private float speed;
     [SerializeField] private float shiftSpeedScale;
-    private float shiftSpeed;
-    private float defaultSpeed;
 
     [SerializeField] private KeyCode left;
     [SerializeField] private KeyCode right;
@@ -22,13 +18,15 @@ public class MoveCamera : MonoBehaviour
     [SerializeField] private float verticalMouseSensitivity;
     [SerializeField] private float horizontalMouseSensitivity;
 
-    private Vector3 velocity;
-
+    private float     shiftSpeed;
+    private float     defaultSpeed;
+    private Vector3   velocity;
     private Rigidbody rb;
-
     private Transform cam;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,18 +35,20 @@ public class MoveCamera : MonoBehaviour
 
         shiftSpeed = speed * shiftSpeedScale;
         defaultSpeed = speed;
-
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
     void Update()
     {
-
         Move();
         RotateCamera();
-
     }
 
+    /// <summary>
+    /// Move the camera
+    /// </summary>
     private void Move()
     {
         velocity = Vector3.zero;
@@ -68,10 +68,11 @@ public class MoveCamera : MonoBehaviour
         if (Input.GetKey(down)) velocity.y = -speed;
 
         transform.position += cam.TransformDirection(velocity) * Time.deltaTime;
-
-        //rb.velocity = cam.TransformDirection(velocity);
     }
 
+    /// <summary>
+    /// Rotate the camera
+    /// </summary>
     private void RotateCamera()
     {
         if (Input.GetMouseButton(1))
@@ -80,11 +81,8 @@ public class MoveCamera : MonoBehaviour
 
             Vector3 rotation = cam.localEulerAngles;
    
-
             rotation.x -= Input.GetAxis("Mouse Y") * verticalMouseSensitivity;
             rotation.y += Input.GetAxis("Mouse X") * horizontalMouseSensitivity;
-
-       
 
             cam.localEulerAngles = rotation;
         }
@@ -93,20 +91,26 @@ public class MoveCamera : MonoBehaviour
             ShowCursor();
         }
     }
-
-
-
-
+    
+    /// <summary>
+    /// Hide the cursor
+    /// </summary>
     private void HideCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    /// <summary>
+    /// Show the cursor
+    /// </summary>
     public void ShowCursor()
     {
         Cursor.lockState = CursorLockMode.None;
     }
 
+    /// <summary>
+    /// Lock the cursor in the center
+    /// </summary>
     public void LockCursorCenter()
     {
         Cursor.lockState = CursorLockMode.Locked;

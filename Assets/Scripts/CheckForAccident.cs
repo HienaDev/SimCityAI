@@ -1,30 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// Check if the car is in an accident
+/// </summary>
 public class CheckForAccident : MonoBehaviour
 {
+    [SerializeField] private float timeInAccident = 5;
 
+    private WaitForSeconds wfs;
+    private NavMeshAgent   navMeshAgent;
+
+    /// <summary>
+    /// If the car is in an accident
+    /// </summary>
+    /// <value> The car is or not in an accident </value>
     public bool Accident { get; private set; }
 
-    [SerializeField] private float timeInAccident = 5;
-    private WaitForSeconds wfs;
-
-    private NavMeshAgent navMeshAgent;
-
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         Accident = false;
         wfs = new WaitForSeconds(timeInAccident);
         navMeshAgent = GetComponent<NavMeshAgent>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /// <summary>
@@ -44,13 +45,15 @@ public class CheckForAccident : MonoBehaviour
             
     }
 
+    /// <summary>
+    /// Start the accident
+    /// </summary>
+    /// <returns> Wait for seconds </returns>
     private IEnumerator StartAccident()
     {
-        Debug.Log("ACCIDENT");
         navMeshAgent.speed = 0;
         Accident = true;
         yield return wfs;
         Accident = false;
     }
-
 }

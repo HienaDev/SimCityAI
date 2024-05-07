@@ -1,29 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
+/// <summary>
+/// Check if the car is drunk
+/// </summary>
 public class IsCarDrunk : MonoBehaviour
 {
+    [SerializeField] private float     chanceOfRandomDrunk = 0.01f;
+    [SerializeField] private float     timeDrunk = 10f;
+    [SerializeField] private Transform model;
+
     public bool isDrunk = false;
 
-    [SerializeField] private float chanceOfRandomDrunk = 0.01f;
-    [SerializeField] private float timeDrunk = 10f;
     private WaitForSeconds wfs;
-
-    [SerializeField] private Transform model;
     private List<MeshRenderer> renderers;
-
     
     /// <summary>
-    /// Get the mesh from all objects of the car
+    /// Start is called before the first frame update
     /// </summary>
     private void Start()
     {
         wfs = new WaitForSeconds(timeDrunk);
         renderers = new List<MeshRenderer>();
-
-        
 
         foreach (Transform t in model)
         {
@@ -34,24 +33,27 @@ public class IsCarDrunk : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-
-    }
-
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
     private void FixedUpdate()
     {
         if (Random.Range(0f, 100f) < chanceOfRandomDrunk)
-            StartCoroutine(GetDrunk());
-
-        
+            StartCoroutine(GetDrunk()); 
     }
 
+    /// <summary>
+    /// Activate the drunk state
+    /// </summary>
     public void ActivateDrunk()
     {
         StartCoroutine(GetDrunk());
     }
 
+    /// <summary>
+    /// Get the car drunk
+    /// </summary>
+    /// <returns> Wait for seconds </returns>
     private IEnumerator GetDrunk()
     {
         TurnRed();
@@ -62,12 +64,10 @@ public class IsCarDrunk : MonoBehaviour
         TurnWhite();
 
         isDrunk = false;
-
     }
 
-
     /// <summary>
-    /// turn the car green on accidents
+    /// Turn the car green on accidents
     /// </summary>
     public void TurnGreen()
     {
@@ -100,7 +100,7 @@ public class IsCarDrunk : MonoBehaviour
     }
 
     /// <summary>
-    /// deactive mesh when getting to destination
+    /// Deactive mesh when getting to destination
     /// </summary>
     public void DeactivateMesh()
     {
@@ -110,6 +110,9 @@ public class IsCarDrunk : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Activate mesh when getting to destination
+    /// </summary>
     public void ActivateMesh()
     {
         foreach (MeshRenderer renderer in renderers)
