@@ -176,14 +176,20 @@ O *Game Manager* é o objeto que controla o estado, antes e durante, da simulaç
 - Caos (*Chaos*)
   - ***chaosChance***: probabilidade de um agente começar a comportar-se de forma errática,
   - ***maxChaosTime***: intervalo máximo de tempo máximo para um agente estar em estado de caos,
-  - ***blinkSpeed***: velocidade do efeito de piscar de um agente em estado de caos,
+  - ***blinkSpeed***: velocidade do efeito de piscar de um agente em estado de caos.
 
 ![Parâmetros de caos](./Images/GameManagerChaos.png)
 
 - Acidente (*Accident*)
-  - ***maxAccidentTime***: intervalo máximo de tempo para um agente estar em estado de acidente,
+  - ***maxAccidentTime***: intervalo máximo de tempo para um agente estar em estado de acidente.
 
 ![Parâmetros de acidente](./Images/GameManagerAccident.png)
+
+- UI
+  - ***carsText***: *text* que mostra o número de carros ativos,
+  - ***pedestriansText***: *text* que mostra o número de peões ativos.
+
+![UI](./Images/GameManagerUI.png)
 
 ## Resultados e discussão
 
