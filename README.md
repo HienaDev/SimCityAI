@@ -9,7 +9,30 @@
 
 - António Rodrigues:
   - Carros
+    - Árvore de comportamento (*Behavior Tree*)
+    - Efeito de alcoolismo (*Chaos*)
+    - *Pathfinding*
   - Agentes fixos do ambiente
+    - Semáforos
+    - Sinais de Stop
+    - Estradas
+    - Destinos
+      - Casa
+      - Jardim
+  - *Game Manager*
+    - Definições dos carros
+    - Gerador de carros
+    - Métodos para UI
+  - *UI*
+    - Butões
+  - Câmara
+    - Câmara com movimentação de teclado para a build
+  - Relatório
+    - Carros
+    - Estradas
+    - Destinos
+    - Semáforos
+    - Sinais Stop
 
 - Rafael José:
   - Peões
