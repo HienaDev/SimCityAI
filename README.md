@@ -12,6 +12,8 @@
     - Árvore de comportamento (*Behavior Tree*)
     - Efeito de alcoolismo (*Chaos*)
     - *Pathfinding*
+  - Peões
+    - Sistema de troca de cor
   - Agentes fixos do ambiente
     - Semáforos
     - Sinais de Stop
