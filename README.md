@@ -140,8 +140,6 @@ Quando um peão está em acidente, este fica parado no local do acidente durante
 
 ![Sequência de comportamento em acidente dos peões](./Images/AccidentPedestrianSequencer.png)
 
-#### Peão
-
 Os peões são representados pelo modelo de um alien. Este modelo muda de cor sempre que é gerado.
 ![Modelo peões](./Images/ModelPeao.png)
 
