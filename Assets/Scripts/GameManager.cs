@@ -3,18 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     [Header("[PEDESTRIANS]")]
-    [SerializeField] private GameObject[]     pedestrianPrefab;
-    [SerializeField] private int            numberOfPedestrians = 10;
-    [SerializeField] private GameObject[]   pedestriansSpawnPoints;
-    [SerializeField] private float          maxDestinyTimePedestrians = 10.0f;
+    [SerializeField] private GameObject   pedestrianPrefab;
+    [SerializeField] private int          numberOfPedestrians = 10;
+    [SerializeField] private GameObject[] pedestriansSpawnPoints;
+    [SerializeField] private float        maxDestinyTimePedestrians = 10.0f;
+
+    [Header("[CARS]")]
+    [SerializeField] private GameObject[] carPrefabs;
+    [SerializeField] private float        numberOfCars;
+    [SerializeField] private GameObject[] carSpawnPoints;
+    [SerializeField] private float        timeForCarToSpawn;
 
     [Header("[CHAOS]")]
     [SerializeField] [Range(0, 100)] private float chaosChance = 2f;
@@ -24,25 +27,16 @@ public class GameManager : MonoBehaviour
     [Header("[ACCIDENT]")]
     [SerializeField] private float maxAccidentTime;
 
-    [Header("[CARS]")]
-    [SerializeField] private GameObject[] carPrefab;
-    [SerializeField] private float numberOfCars;
-    [SerializeField] private GameObject[] carSpawnPoints;
-    private int[] numberOfCarsInEachWaypoint;
-    private List<IsCarDrunk> carsToGetDrunks;
-    
-    
-    [SerializeField] private float timeForCarToSpawn;
-    private WaitForSeconds wfsCar;
-    
-    public GameObject[] CarWaypoints => carSpawnPoints;
-
     [Header("[UI]")]
     [SerializeField] private TextMeshProUGUI carsText;
     [SerializeField] private TextMeshProUGUI pedestriansText;
 
-    private int numberOfActivePedestrians = 0;
-    private int numberOfActiveCars = 0;
+    private int[]                      numberOfCarsInEachWaypoint;
+    private List<IsCarDrunk>           carsToGetDrunks;
+    private WaitForSeconds             wfsCar;
+    private int                        numberOfActivePedestrians;
+    private int                        numberOfActiveCars;
+    private List<PedestrianController> spawnedPedestrians;
 
     /// <summary>
     /// Singleton instance
@@ -73,24 +67,20 @@ public class GameManager : MonoBehaviour
     /// Get the waypoints of the pedestrians
     /// </summary>
     public GameObject[] PedestriansWaypoints => pedestriansSpawnPoints;
-
-    private List<PedestrianController> spawnedPedestrians;
+    /// <summary>
+    /// Get the waypoints of the cars
+    /// </summary>
+    public GameObject[] CarWaypoints => carSpawnPoints;
 
     /// <summary>
     /// Start the game manager
     /// </summary>
     private void Awake()
     {
-       
-
-        Instance = this;
-
+        numberOfActivePedestrians = 0;
+        numberOfActiveCars = 0;
         
-    }
-
-    private void Start()
-    {
-        //StartSimulation();
+        Instance = this;
     }
 
     /// <summary>
@@ -98,11 +88,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void StartSimulation()
     {
-
         carsToGetDrunks = new List<IsCarDrunk>();
-
         spawnedPedestrians = new List<PedestrianController>();
-
         numberOfCarsInEachWaypoint = new int[carSpawnPoints.Length];
 
         for (int i = 0; i < numberOfPedestrians; i++)
@@ -119,13 +106,11 @@ public class GameManager : MonoBehaviour
 
         wfsCar = new WaitForSeconds(timeForCarToSpawn);
 
-
         for (int i = 0; i < carSpawnPoints.Length; i++)
         {
             StartCoroutine(SpawnCarsAtWaypoints(i));
 
         }
-
     }
 
     /// <summary>
@@ -200,7 +185,10 @@ public class GameManager : MonoBehaviour
         while (numberOfCarsInEachWaypoint[n] > 0)
         {
             numberOfCarsInEachWaypoint[n]--;
-            GameObject car = Instantiate(carPrefab[UnityEngine.Random.Range(0, carPrefab.Length)], carSpawnPoints[n].transform.position, Quaternion.identity, transform);
+            GameObject car = Instantiate(carPrefabs[UnityEngine.Random.Range(0, carPrefabs.Length)], 
+                                        carSpawnPoints[n].transform.position, 
+                                        Quaternion.identity, 
+                                        transform);
             carsToGetDrunks.Add(car.GetComponent<IsCarDrunk>());
             yield return wfsCar;
         }
@@ -217,7 +205,10 @@ public class GameManager : MonoBehaviour
 
         int spawnPointIndex = UnityEngine.Random.Range(0, pedestriansSpawnPoints.Length);
         GameObject spawnPoint = pedestriansSpawnPoints[spawnPointIndex];
-        GameObject pedestrian = Instantiate(pedestrianPrefab[UnityEngine.Random.Range(0, pedestrianPrefab.Length)], spawnPoint.transform.position, Quaternion.identity);
+        GameObject pedestrian = Instantiate(pedestrianPrefab, 
+                                            spawnPoint.transform.position, 
+                                            Quaternion.identity, 
+                                            transform);
         pedestrian.GetComponentInChildren<Renderer>().material = new Material(pedestrian.GetComponentInChildren<Renderer>().material);
         pedestrian.GetComponentInChildren<Renderer>().material.color = UnityEngine.Random.ColorHSV();
         AddPedestrian();
@@ -260,31 +251,5 @@ public class GameManager : MonoBehaviour
     {
         numberOfActiveCars--;
         carsText.text = $"Number of cars: {numberOfActiveCars}";
-    }
-
-    /// <summary>
-    /// Update is called once per frame
-    /// </summary>
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.CompareTag("Pedestrian"))
-                {
-                    PedestrianController pedestrianController = hit.collider.GetComponent<PedestrianController>();
-                    pedestrianController.SetDrunkState(true);
-                }
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            RandomCarDrunk();
-        }
     }
 }
