@@ -22,7 +22,7 @@ namespace TheKiwiCoder {
         public Renderer renderer;
         public GameManager gameManager;
         public Color originalColor;
-        public MeshRenderer[] meshRenderers;
+        public Renderer[] meshRenderers;
         public DisplayRaycastDistance drd;
         public TrafficCollider trafficCollider;
         public StopSignLogic waitingForStopSign;
@@ -44,7 +44,7 @@ namespace TheKiwiCoder {
             context.agent = gameObject.GetComponent<NavMeshAgent>();
             context.characterController = gameObject.GetComponent<CharacterController>();
             context.pedestrianController = gameObject.GetComponent<PedestrianController>(); 
-            context.meshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+            context.meshRenderers = gameObject.GetComponentsInChildren<Renderer>();
             context.renderer = gameObject.GetComponentInChildren<Renderer>();
             context.gameManager = GameObject.FindObjectOfType<GameManager>();
             context.drd = gameObject.GetComponent<DisplayRaycastDistance>();
@@ -70,7 +70,7 @@ namespace TheKiwiCoder {
         /// Deactivate all agent's mesh renderers.
         /// </summary>
         public void DeactivateAgent() {
-            foreach (MeshRenderer meshRenderer in meshRenderers)
+            foreach (Renderer meshRenderer in meshRenderers)
                 meshRenderer.enabled = false;
 
             if (collider != null)
@@ -84,7 +84,7 @@ namespace TheKiwiCoder {
         /// Activate all agent's mesh renderers.
         /// </summary>
         public void ActivateAgent() {
-            foreach (MeshRenderer meshRenderer in meshRenderers)
+            foreach (Renderer meshRenderer in meshRenderers)
                 meshRenderer.enabled = true;
             if (collider != null)
                 collider.enabled = true;

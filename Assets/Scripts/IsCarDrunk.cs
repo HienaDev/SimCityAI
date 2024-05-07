@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IsCarDrunk : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class IsCarDrunk : MonoBehaviour
 
     [SerializeField] private Transform model;
     private List<MeshRenderer> renderers;
+
+    
 
     private void Start()
     {
@@ -67,6 +70,8 @@ public class IsCarDrunk : MonoBehaviour
 
     }
 
+
+
     public void TurnGreen()
     {
         foreach (MeshRenderer renderer in renderers)
@@ -80,6 +85,22 @@ public class IsCarDrunk : MonoBehaviour
         foreach (MeshRenderer renderer in renderers)
         {
             renderer.material.color = Color.white;
+        }
+    }
+
+    public void DeactivateMesh()
+    {
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.enabled = false;
+        }
+    }
+
+    public void ActivateMesh()
+    {
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.enabled = true;
         }
     }
 }

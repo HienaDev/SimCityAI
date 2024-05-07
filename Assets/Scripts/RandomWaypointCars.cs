@@ -21,6 +21,9 @@ public class RandomWaypointCars : ActionNode
         if (context.readyForNextDestination)
         {
             context.readyForNextDestination = false;
+            context.collider.enabled = true;
+            context.icd.ActivateMesh();
+            context.agent.enabled = true;
             GameObject waypoint = context.gameManager.CarWaypoints[Random.Range(0, context.gameManager.CarWaypoints.Length)];
             blackboard.moveToPosition.x = waypoint.transform.position.x;
             blackboard.moveToPosition.z = waypoint.transform.position.z;

@@ -37,6 +37,9 @@ public class MoveToPositionCar : ActionNode
 
         if (context.agent.remainingDistance < tolerance)
         {
+            context.icd.DeactivateMesh();
+            context.collider.enabled = false;
+            context.agent.enabled = false;
             context.readyForNextDestination = true;
             return State.Success;
         }

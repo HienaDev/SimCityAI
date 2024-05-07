@@ -28,4 +28,6 @@ public class CheckForPedestrianCollision : MonoBehaviour
         if (other.gameObject.CompareTag("Pedestrian"))
             PedestrianCollision = true;
     }
+
+    
 }

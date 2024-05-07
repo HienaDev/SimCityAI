@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     [Header("[PEDESTRIANS]")]
-    [SerializeField] private GameObject     pedestrianPrefab;
+    [SerializeField] private GameObject[]     pedestrianPrefab;
     [SerializeField] private int            numberOfPedestrians = 10;
     [SerializeField] private GameObject[]   pedestriansSpawnPoints;
     [SerializeField] private float          maxDestinyTimePedestrians = 10.0f;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private int[] carsToSpawnInEachWaypoint;
     private List<IsCarDrunk> carsToGetDrunks;
     [SerializeField] private float carsToSpawn;
-    [SerializeField] private GameObject carPrefab;
+    [SerializeField] private GameObject[] carPrefab;
     [SerializeField] private float timeForCarToSpawn;
     private WaitForSeconds wfsCar;
     [SerializeField] private Vector2 timeForCarsToMove;
@@ -120,6 +120,25 @@ public class GameManager : MonoBehaviour
         //RandomCarDrunk();
     }
 
+    public void ResetSimulation()
+    {
+        foreach(var car in carsToGetDrunks)
+        {
+            Destroy(car.gameObject);
+        }
+
+        foreach(var pedestrian in spawnedPedestrians)
+        {
+            Destroy(pedestrian.gameObject);
+        }
+
+        StopCoroutine(SpawnPedestrianAtRandomTime());
+
+        carsToGetDrunks = new List<IsCarDrunk>();
+
+        spawnedPedestrians = new List<PedestrianController>();
+    }
+
 
     public void RandomCarDrunk()
     {
@@ -154,7 +173,7 @@ public class GameManager : MonoBehaviour
         while (carsToSpawnInEachWaypoint[n] > 0)
         {
             carsToSpawnInEachWaypoint[n]--;
-            GameObject car =  Instantiate(carPrefab, carWaypoints[n].transform.position, Quaternion.identity, transform);
+            GameObject car = Instantiate(carPrefab[UnityEngine.Random.Range(0, carPrefab.Length)], carWaypoints[n].transform.position, Quaternion.identity, transform);
             carsToGetDrunks.Add(car.GetComponent<IsCarDrunk>());
             yield return wfsCar;
         }
@@ -171,7 +190,9 @@ public class GameManager : MonoBehaviour
 
         int spawnPointIndex = UnityEngine.Random.Range(0, pedestriansSpawnPoints.Length);
         GameObject spawnPoint = pedestriansSpawnPoints[spawnPointIndex];
-        GameObject pedestrian = Instantiate(pedestrianPrefab, spawnPoint.transform.position, Quaternion.identity);
+        GameObject pedestrian = Instantiate(pedestrianPrefab[UnityEngine.Random.Range(0, pedestrianPrefab.Length)], spawnPoint.transform.position, Quaternion.identity);
+        pedestrian.GetComponentInChildren<Renderer>().material = new Material(pedestrian.GetComponentInChildren<Renderer>().material);
+        pedestrian.GetComponentInChildren<Renderer>().material.color = UnityEngine.Random.ColorHSV();
         numberOfActivePedestrians++;
         spawnedPedestrians.Add(pedestrian.GetComponent<PedestrianController>());
     }
