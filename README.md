@@ -43,17 +43,19 @@ A implementação deste trabalho foi feito em 3D, utilizando o *game engine* Uni
 
 Os peões são gerados aleatoriamente no inicio da simulação, sendo possível definir o número máximo de agentes a serem gerados (*Game manager - numberOfPedestrians*), num tempo aleatório entre 0 e um intervalo máximo de tempo definido pelo utilizador (*Game manager - maxDestinyTimePedestrians*). Têm um comportamento definido por uma árvore de comportamento (*Behavior Tree - Pedestrian Tree*), a qual tem 3 estados principais: normal (ou sóbrio), bêbado e em acidente.
 
+![Árvore de comportamento dos peões](./Images/PedestrianBehaviorTree.png)
+
 Os peões em estado normal têm um destino aleatório e tentam chegar até ele, todos eles com uma velocidade diferente, respeitando as regras de trânsito, no qual vão permanecer num tempo aleatório entre 0 e um intervalo máximo de tempo definido pelo utilizador (*Game manager - maxDestinyTimePedestrians*) até voltarem a sair de lá para outro destino aleatório.
 
-[PLACEHOLDER PARA IMAGEM DA ARVORE DE COMPORTAMENTO EM ESTADO NORMAL]
+![Sequência de comportamento normal dos peões](./Images/NormalPedestrianSequencer.png)
 
 Cada vez que um peão sai do seu destino há uma probabilidade de sair de lá bêbado. Quando um peão está bêbado, o seu comportamento muda, passando a andar de forma mais errática e a ignorar as regras de trânsito, com uma velocidade aleatória, que pode ser mais baixa do que o seu mínimo no estado normal ou mais alta do que o máximo no seu estado normal. A probabilidade de um peão sair bêbado do seu destino é definida pelo utilizador (*Game manager - chaosChance*). E dura um tempo aleatório entre 0 e um intervalo máximo de tempo definido (*Game manager - maxChaosTime*), o peão volta ao estado normal. Durante este estado o peão está ainda a piscar para indicar que está bêbado, entre a sua cor original e a cor vermelha, a velocidade deste efeito é definida pelo utilizador (*Game manager - blinkSpeed*).
 
-[PLACEHOLDER PARA IMAGEM DA ARVORE DE COMPORTAMENTO EM ESTADO BÊBADO]
+![Sequência de comportamento bêbado dos peões](./Images/DrunkPedestrianSequencer.png)
 
 Quando um peão está em acidente, este fica parado no local do acidente durante um tempo aleatório entre 0 e um intervalo máximo de tempo definido pelo utilizador (*Game manager - maxAccidentTime*), após o qual acabar volta ao estado normal. Este estado é ativado quando um peão colide com um veículo. Durante este estado o peão está a piscar para indicar que está em acidente, entre a sua cor original e a cor vermelha, a velocidade deste efeito é definida pelo utilizador (*Game manager - blinkSpeed*).
 
-[PLACEHOLDER PARA IMAGEM DA ARVORE DE COMPORTAMENTO EM ESTADO ACIDENTE]
+![Sequência de comportamento em acidente dos peões](./Images/AccidentPedestrianSequencer.png)
 
 ### *Game Manager*
 
